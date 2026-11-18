@@ -1,0 +1,13 @@
+<svg width="240" height="62" viewBox="0 0 240 62" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-proj-cospace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082F49"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-proj-cospace)" stroke="#7DD3FC" stroke-width="1.6"/>
+  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.14"/>
+  <g transform="translate(18, 19)"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="#E0F2FE" stroke-width="2"/><line x1="4" y1="10" x2="20" y2="10" stroke="#E0F2FE" stroke-width="2"/><line x1="10" y1="10" x2="10" y2="20" stroke="#E0F2FE" stroke-width="2"/></g>
+  <text x="59" y="29" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5" fill="#FFFFFF">COSPACE BOOKING</text>
+  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.82">Ver repositorios ↗</text>
+</svg>

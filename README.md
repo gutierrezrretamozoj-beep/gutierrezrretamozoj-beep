@@ -1,140 +1,105 @@
-<!-- CABECERA TIPO HUD DE VIDEOJUEGO CON TU MUNDO 3D EN VIVO -->
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B2E,25:8B5CF6,55:EC4899,85:F59E0B,100:10B981&height=175&section=header&text=🌲%20DAVID'S%20WORLD%20🌅&fontSize=46&fontColor=FFF8F0&fontAlignY=42&desc=Jos%C3%A9%20David%20Guti%C3%A9rrez%20%E2%80%A2%20Arquitecto%20de%20Mundos%203D%20%26%20Full-Stack&descSize=16&descAlignY=68&descColor=FEF3C7&animation=twinkling" alt="David's World Header" />
-</div>
-
-<div align="center">
-  <img src="https://img.shields.io/badge/🟢_ONLINE-Barranquilla,_CO-10B981?style=flat-square" />
-  <img src="https://img.shields.io/badge/🌅_CLIMA-Atardecer_Dorado-F59E0B?style=flat-square" />
-  <img src="https://img.shields.io/badge/🔮_PORTALES-5_Orbes_Activos-EC4899?style=flat-square" />
-  <img src="https://img.shields.io/badge/🦊_FAUNA-Valle_Interactivo-8B5CF6?style=flat-square" />
-</div>
-
-<br/>
-
-<!-- TU MUNDO 3D EN MOVIMIENTO CON ENLACE DIRECTO AL JUEGO -->
+<!-- SECCIÓN 1: HERO CINEMATOGRÁFICO CON EL VIDEO 3D EN VIVO DE FONDO -->
 <div align="center">
   <a href="https://davis-world.is-a.dev/" target="_blank">
-    <img width="92%" alt="David's World 3D — Haz clic para entrar al juego" src="https://github.com/user-attachments/assets/9c5cf663-aaab-4799-b119-7ce0f956b2c4" />
+    <img width="100%" src="./assets/01-hero-world.svg" alt="David's World 3D — Haz clic para entrar al mundo en vivo" />
   </a>
 </div>
 
 <br/>
 
-<!-- BOTONES MULTICOLOR DE ACCESO RÁPIDO -->
+<!-- BARRA DE ACCESOS RÁPIDOS -->
 <div align="center">
-  <a href="https://davis-world.is-a.dev/">
-    <img src="https://img.shields.io/badge/🎮_ENTRAR_AL_MUNDO_3D-10B981?style=for-the-badge&logo=threedotjs&logoColor=white" />
+  <a href="https://davis-world.is-a.dev/" target="_blank">
+    <img width="24%" src="./assets/btn-world.svg" alt="Entrar al Mundo 3D" />
   </a>
-  <a href="https://davis-world.is-a.dev/?mode=builder">
-    <img src="https://img.shields.io/badge/📱_MODO_BUILDER_MÓVIL-EC4899?style=for-the-badge&logo=react&logoColor=white" />
+  <a href="https://davis-world.is-a.dev/?mode=builder" target="_blank">
+    <img width="24%" src="./assets/btn-builder.svg" alt="Modo Builder Móvil" />
   </a>
-  <a href="https://davis-world.is-a.dev/?mode=lite">
-    <img src="https://img.shields.io/badge/🧭_EXPLORADOR_LITE-F59E0B?style=for-the-badge&logo=leaflet&logoColor=1E293B" />
+  <a href="https://davis-world.is-a.dev/?mode=lite" target="_blank">
+    <img width="24%" src="./assets/btn-lite.svg" alt="Explorador Lite" />
   </a>
   <a href="mailto:gutierrezrretamozoj@gmail.com">
-    <img src="https://img.shields.io/badge/💌_MENSAJE_DIRECTO-8B5CF6?style=for-the-badge&logo=gmail&logoColor=white" />
+    <img width="24%" src="./assets/btn-contact.svg" alt="Mensaje Directo" />
   </a>
 </div>
 
----
-
-### 🔮 Los 5 Orbes Elementales del Valle *(Haz clic en cada orbe para abrir su inventario)*
-
-<details open>
-<summary>🟢 <b>ORBE ESMERALDA — Arquitectura Backend & Datos</b></summary>
 <br/>
+
+<!-- SECCIÓN 2: ORBE ESMERALDA — ARQUITECTURA BACKEND & DATOS -->
 <div align="center">
-  <img src="https://img.shields.io/badge/PostgreSQL-10B981?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Supabase-059669?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img src="https://img.shields.io/badge/NestJS-E11D48?style=for-the-badge&logo=nestjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-16A34A?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prisma_ORM-0D9488?style=for-the-badge&logo=prisma&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeORM-EA580C?style=for-the-badge&logo=typeorm&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis_Cache-DC2626?style=for-the-badge&logo=redis&logoColor=white" />
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Arquitectura-Database--First-065F46?style=flat-square" />
-  <img src="https://img.shields.io/badge/Seguridad-JWT_&_Multi--Tenant-047857?style=flat-square" />
-  <img src="https://img.shields.io/badge/Docs-Swagger_OpenAPI-10B981?style=flat-square" />
+  <img width="100%" src="./assets/02-orb-emerald.svg" alt="Orbe Esmeralda — Arquitectura Backend y Datos" />
 </div>
-</details>
 
-<details>
-<summary>🩷 <b>ORBE CORAL — Mundos 3D, WebGL & Interfaces Vivas</b></summary>
 <br/>
+
+<!-- SECCIÓN 3: ORBE CORAL — MUNDOS 3D, WEBGL & INTERFACES VIVAS -->
 <div align="center">
-  <img src="https://img.shields.io/badge/React_19-EC4899?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-3B82F6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Three.js_3D-DB2777?style=for-the-badge&logo=threedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-8B5CF6?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite_7-F59E0B?style=for-the-badge&logo=vite&logoColor=1E293B" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Experiencia-Dual_PC_3D_+_Móvil_Builder-BE185D?style=flat-square" />
-  <img src="https://img.shields.io/badge/Animación-Shaders_&_Partículas-F43F5E?style=flat-square" />
+  <img width="100%" src="./assets/03-orb-coral.svg" alt="Orbe Coral — Mundos 3D, WebGL e Interfaces Vivas" />
 </div>
-</details>
 
-<details>
-<summary>🟣 <b>ORBE AMATISTA — Misiones & Construcciones del Mundo</b></summary>
 <br/>
 
-| Portal | Creación | Poderes Equipados | Enlace |
-| :---: | :--- | :--- | :---: |
-| 🌅 | **David's World 3D** | `React 19` `Three.js` `TypeScript` `Vite` | [Jugar ↗](https://davis-world.is-a.dev/) |
-| 🦊 | **Wildlife Sanctuary SaaS** | `Next.js` `TypeORM` `PostgreSQL` `Redis` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
-| 🏛️ | **Cospace Booking** | `Next.js` `Prisma` `Supabase` `Tailwind` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
-| 🏟️ | **Vice City Complex** | `PostgreSQL` `NestJS` `Swagger` `JWT` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
-
-</details>
-
-<details>
-<summary>🟡 <b>ORBE ÁMBAR — Habilidades de Explorador (Nivel RPG)</b></summary>
-<br/>
-
-```text
-⚔️  Arquitectura Full-Stack   ██████████████████░░  92%  [Database-First & APIs]
-🎨  Mundos 3D & UI Interactiva █████████████████░░░  88%  [Three.js, React 19, Shaders]
-🛡️  Seguridad & Multi-Tenant   ████████████████░░░░  85%  [JWT, Zero Trust, Redis]
-🚀  Cloud & Despliegue         █████████████████░░░  86%  [Vercel, Docker, GitHub CI]
-```
-
-</details>
-
-<details>
-<summary>🔵 <b>ORBE CIAN — Cabaña del Viajero & Contacto</b></summary>
-<br/>
+<!-- SECCIÓN 4: ORBE AMATISTA — MISIONES & CONSTRUCCIONES DEL MUNDO -->
 <div align="center">
-  <img src="https://img.shields.io/badge/Ubicación-Barranquilla,_Colombia-0284C7?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Rol-Full--Stack_Software_Engineer-0EA5E9?style=for-the-badge" />
+  <img width="100%" src="./assets/04-orb-amethyst.svg" alt="Orbe Amatista — Misiones y Construcciones del Mundo" />
+</div>
+
+<div align="center">
+  <a href="https://davis-world.is-a.dev/" target="_blank">
+    <img width="24%" src="./assets/btn-proj-world.svg" alt="Jugar David's World 3D" />
+  </a>
+  <a href="https://github.com/gutierrezrretamozoj-beep?tab=repositories" target="_blank">
+    <img width="24%" src="./assets/btn-proj-wildlife.svg" alt="Wildlife Sanctuary SaaS" />
+  </a>
+  <a href="https://github.com/gutierrezrretamozoj-beep?tab=repositories" target="_blank">
+    <img width="24%" src="./assets/btn-proj-cospace.svg" alt="Cospace Booking" />
+  </a>
+  <a href="https://github.com/gutierrezrretamozoj-beep?tab=repositories" target="_blank">
+    <img width="24%" src="./assets/btn-proj-vice.svg" alt="Vice City Complex" />
+  </a>
+</div>
+
+<br/>
+
+<!-- SECCIÓN 5: ORBE ÁMBAR — HABILIDADES DE EXPLORADOR (NIVEL RPG) -->
+<div align="center">
+  <img width="100%" src="./assets/05-orb-amber.svg" alt="Orbe Ámbar — Habilidades de Explorador Nivel RPG" />
+</div>
+
+<br/>
+
+<!-- SECCIÓN 6: ORBE CIAN — CABAÑA DEL VIAJERO & CONTACTO -->
+<div align="center">
   <a href="mailto:gutierrezrretamozoj@gmail.com">
-    <img src="https://img.shields.io/badge/Email-gutierrezrretamozoj@gmail.com-F59E0B?style=for-the-badge&logo=gmail&logoColor=1E293B" />
+    <img width="100%" src="./assets/06-orb-cyan.svg" alt="Orbe Cian — Cabaña del Viajero y Contacto" />
   </a>
 </div>
-</details>
 
----
+<br/>
 
-### 🏆 Trofeos, Radar de Actividad & Energía del Valle
-
+<!-- SECCIÓN 7: RADAR DE ACTIVIDAD & ENERGÍA DEL VALLE -->
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=gutierrezrretamozoj-beep&theme=radical&no-frame=true&no-bg=true&row=1&column=6&margin-w=12" alt="Trofeos" />
+  <img width="100%" src="./assets/07-radar-header.svg" alt="Radar de Actividad y Energía del Valle" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img height="175" src="https://github-readme-stats.vercel.app/api?username=gutierrezrretamozoj-beep&show_icons=true&theme=synthwave&hide_border=true&title_color=FDE68A&icon_color=34D399&text_color=F8FAFC" alt="Stats" />
-  <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gutierrezrretamozoj-beep&layout=compact&theme=synthwave&hide_border=true&title_color=F9A8D4&text_color=F8FAFC" alt="Languages" />
+  <img height="185" src="https://github-readme-stats.vercel.app/api?username=gutierrezrretamozoj-beep&show_icons=true&bg_color=1A103D&border_color=8B5CF6&border_radius=18&title_color=FDE68A&icon_color=34D399&text_color=F8FAFC" alt="GitHub Stats" />
+  <img height="185" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gutierrezrretamozoj-beep&layout=compact&bg_color=1A103D&border_color=EC4899&border_radius=18&title_color=F9A8D4&text_color=F8FAFC" alt="Top Languages" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=gutierrezrretamozoj-beep&bg_color=1E1B2E&color=FDE68A&line=EC4899&point=34D399&area=true&area_color=8B5CF6&hide_border=true&custom_title=⚡%20Pulso%20de%20Creación%20en%20David's%20World" alt="Activity Graph" />
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=gutierrezrretamozoj-beep&bg_color=1A103D&color=FDE68A&line=EC4899&point=34D399&area=true&area_color=8B5CF6&hide_border=true&radius=18&custom_title=Pulso%20de%20Creaci%C3%B3n%20en%20David's%20World" alt="Activity Graph" />
 </div>
 
-<!-- OLA MULTICOLOR DE CIERRE -->
+<br/>
+
+<!-- SECCIÓN 8: OLA MULTICOLOR ANIMADA DE CIERRE -->
 <div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:10B981,25:06B6D4,50:8B5CF6,75:EC4899,100:F59E0B&height=120&section=footer&text=🦊%20Explora%20el%20mundo%20en%20davis-world.is-a.dev%20🦉&fontSize=17&fontColor=FFFFFF&fontAlignY=65" alt="Footer" />
+  <a href="https://davis-world.is-a.dev/" target="_blank">
+    <img width="100%" src="./assets/08-footer-wave.svg" alt="Explora David's World en davis-world.is-a.dev" />
+  </a>
 </div>

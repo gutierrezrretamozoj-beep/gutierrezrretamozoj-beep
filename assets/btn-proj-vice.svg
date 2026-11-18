@@ -1,0 +1,13 @@
+<svg width="240" height="62" viewBox="0 0 240 62" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-proj-vice" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C0519"/>
+      <stop offset="100%" stop-color="#BE123C"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-proj-vice)" stroke="#FDA4AF" stroke-width="1.6"/>
+  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.14"/>
+  <g transform="translate(18, 19)"><polyline points="8,7 3,12 8,17" fill="none" stroke="#FFE4E6" stroke-width="2"/><polyline points="16,7 21,12 16,17" fill="none" stroke="#FFE4E6" stroke-width="2"/><line x1="14" y1="5" x2="10" y2="19" stroke="#FDA4AF" stroke-width="2"/></g>
+  <text x="59" y="29" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5" fill="#FFFFFF">VICE CITY COMPLEX</text>
+  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.82">Ver repositorios ↗</text>
+</svg>

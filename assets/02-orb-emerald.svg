@@ -1,0 +1,112 @@
+<svg width="1000" height="285" viewBox="0 0 1000 285" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#031D19"/>
+      <stop offset="52%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#042620"/>
+    </linearGradient>
+    <radialGradient id="glow-emerald" cx="12%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb-sphere-em" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#A7F3D0"/>
+      <stop offset="45%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </radialGradient>
+    <pattern id="grid-em" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#6EE7B7" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#bg-emerald)" stroke="#34D399" stroke-opacity="0.55" stroke-width="1.8"/>
+  <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#grid-em)"/>
+  <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#glow-emerald)"/>
+
+  <!-- Orbe Esmeralda Animado -->
+  <g transform="translate(62, 62)">
+    <circle cx="0" cy="0" r="34" fill="#10B981" fill-opacity="0.16">
+      <animate attributeName="r" values="30;37;30" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.12;0.28;0.12" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="22" fill="url(#orb-sphere-em)" stroke="#A7F3D0" stroke-width="1.5"/>
+    <ellipse cx="-6" cy="-7" rx="6" ry="3.5" fill="#FFFFFF" fill-opacity="0.55" transform="rotate(-25 -6 -7)"/>
+  </g>
+
+  <!-- Cabecera de Sección -->
+  <rect x="112" y="30" width="166" height="24" rx="12" fill="#10B981" fill-opacity="0.22" stroke="#6EE7B7" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="195" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#A7F3D0">ORBE 01  •  ESMERALDA</text>
+
+  <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Arquitectura Backend &amp; Datos</text>
+  <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#D1FAE5" fill-opacity="0.88">Sistemas de alto rendimiento, diseño Database-First y aislamiento multi-tenant de nivel producción</text>
+
+  <!-- Chips de Tecnologías (7 en fila) -->
+  
+    <g transform="translate(28, 128)">
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#34D399"/>
+      <circle cx="16" cy="28" r="5" fill="#34D399"/>
+      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">PostgreSQL</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Motor SQL</text>
+    </g>
+    <g transform="translate(164, 128)">
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#10B981"/>
+      <circle cx="16" cy="28" r="5" fill="#10B981"/>
+      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Supabase</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Cloud DB</text>
+    </g>
+    <g transform="translate(300, 128)">
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#FB7185"/>
+      <circle cx="16" cy="28" r="5" fill="#FB7185"/>
+      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">NestJS</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Framework</text>
+    </g>
+    <g transform="translate(436, 128)">
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#4ADE80"/>
+      <circle cx="16" cy="28" r="5" fill="#4ADE80"/>
+      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Node.js</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Runtime</text>
+    </g>
+    <g transform="translate(572, 128)">
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#2DD4BF"/>
+      <circle cx="16" cy="28" r="5" fill="#2DD4BF"/>
+      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Prisma ORM</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Type-Safe</text>
+    </g>
+    <g transform="translate(708, 128)">
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#FB923C"/>
+      <circle cx="16" cy="28" r="5" fill="#FB923C"/>
+      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">TypeORM</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Entidades</text>
+    </g>
+    <g transform="translate(844, 128)">
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#F87171"/>
+      <circle cx="16" cy="28" r="5" fill="#F87171"/>
+      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Redis Cache</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">In-Memory</text>
+    </g>
+
+  <!-- 3 Pilares Arquitectónicos -->
+  <g transform="translate(28, 204)">
+    <rect x="0" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.82" stroke="#34D399" stroke-opacity="0.45" stroke-width="1.2"/>
+    <circle cx="22" cy="25" r="5" fill="#34D399"/>
+    <text x="38" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">ARQUITECTURA</text>
+    <text x="38" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">Database-First &amp; Escalable</text>
+
+    <rect x="320" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.82" stroke="#34D399" stroke-opacity="0.45" stroke-width="1.2"/>
+    <circle cx="342" cy="25" r="5" fill="#34D399"/>
+    <text x="358" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">SEGURIDAD</text>
+    <text x="358" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">JWT, RBAC &amp; Multi-Tenant</text>
+
+    <rect x="640" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.82" stroke="#34D399" stroke-opacity="0.45" stroke-width="1.2"/>
+    <circle cx="662" cy="25" r="5" fill="#34D399"/>
+    <text x="678" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">DOCUMENTACIÓN API</text>
+    <text x="678" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">Swagger OpenAPI &amp; Contratos</text>
+  </g>
+</svg>
