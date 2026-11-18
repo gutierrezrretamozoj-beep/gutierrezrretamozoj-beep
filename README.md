@@ -66,34 +66,3 @@
   <img src="https://img.shields.io/badge/React_19-EC4899?style=for-the-badge&logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-3B82F6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Three.js_3D-DB2777?style=for-the-badge&logo=threedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-8B5CF6?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite_7-F59E0B?style=for-the-badge&logo=vite&logoColor=1E293B" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <br/><br/>
-  <img src="https://img.shields.io/badge/Experiencia-Dual_PC_3D_+_Móvil_Builder-BE185D?style=flat-square" />
-  <img src="https://img.shields.io/badge/Animación-Shaders_&_Partículas-F43F5E?style=flat-square" />
-</div>
-</details>
-
-<details>
-<summary>🟣 <b>ORBE AMATISTA — Misiones & Construcciones del Mundo</b></summary>
-<br/>
-
-| Portal | Creación | Poderes Equipados | Enlace |
-| :---: | :--- | :--- | :---: |
-| 🌅 | **David's World 3D** | `React 19` `Three.js` `TypeScript` `Vite` | [Jugar ↗](https://davis-world.is-a.dev/) |
-| 🦊 | **Wildlife Sanctuary SaaS** | `Next.js` `TypeORM` `PostgreSQL` `Redis` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
-| 🏛️ | **Cospace Booking** | `Next.js` `Prisma` `Supabase` `Tailwind` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
-| 🏟️ | **Vice City Complex** | `PostgreSQL` `NestJS` `Swagger` `JWT` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
-
-</details>
-
-<details>
-<summary>🟡 <b>ORBE ÁMBAR — Habilidades de Explorador (Nivel RPG)</b></summary>
-<br/>
-
-```text
-⚔️  Arquitectura Full-Stack   ██████████████████░░  92%  [Database-First & APIs]
-🎨  Mundos 3D & UI Interactiva █████████████████░░░  88%  [Three.js, React 19, Shaders]
-🛡️  Seguridad & Multi-Tenant   ████████████████░░░░  85%  [JWT, Zero Trust, Redis]
-🚀  Cloud & Despliegue         █████████████████░░░  86%  [Vercel, Docker, GitHub CI]
