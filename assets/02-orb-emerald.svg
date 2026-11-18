@@ -1,12 +1,15 @@
 <svg width="1000" height="285" viewBox="0 0 1000 285" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <clipPath id="clip-em"><rect x="2" y="2" width="996" height="281" rx="22"/></clipPath>
     <linearGradient id="bg-emerald" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#031D19"/>
       <stop offset="52%" stop-color="#064E3B"/>
       <stop offset="100%" stop-color="#042620"/>
     </linearGradient>
     <radialGradient id="glow-emerald" cx="12%" cy="22%" r="55%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.38"/>
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.42">
+        <animate attributeName="stop-opacity" values="0.28;0.48;0.28" dur="4s" repeatCount="indefinite"/>
+      </stop>
       <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="orb-sphere-em" cx="35%" cy="30%" r="70%">
@@ -19,94 +22,179 @@
     </pattern>
   </defs>
 
-  <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#bg-emerald)" stroke="#34D399" stroke-opacity="0.55" stroke-width="1.8"/>
-  <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#grid-em)"/>
-  <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#glow-emerald)"/>
+  <g clip-path="url(#clip-em)">
+    <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#bg-emerald)"/>
+    <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#grid-em)"/>
+    <rect x="2" y="2" width="996" height="281" rx="22" fill="url(#glow-emerald)"/>
 
-  <!-- Orbe Esmeralda Animado -->
-  <g transform="translate(62, 62)">
-    <circle cx="0" cy="0" r="34" fill="#10B981" fill-opacity="0.16">
-      <animate attributeName="r" values="30;37;30" dur="3.4s" repeatCount="indefinite"/>
-      <animate attributeName="fill-opacity" values="0.12;0.28;0.12" dur="3.4s" repeatCount="indefinite"/>
+    <!-- CIRCUITOS DE TELEMETRÍA Y PAQUETES DE DATOS EN MOVIMIENTO (DERECHA) -->
+    <g stroke="#34D399" stroke-opacity="0.24" stroke-width="1.5" fill="none">
+      <path d="M 670,32 L 770,32 L 792,54 L 970,54"/>
+      <path d="M 720,76 L 835,76 L 855,96 L 970,96"/>
+      <path d="M 650,94 L 740,94 L 762,72 L 820,72"/>
+    </g>
+    <!-- Paquetes brillantes viajando por el circuito -->
+    <circle r="3.5" fill="#A7F3D0">
+      <animateMotion dur="3.4s" repeatCount="indefinite" path="M 670,32 L 770,32 L 792,54 L 970,54"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="3.4s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="0" cy="0" r="22" fill="url(#orb-sphere-em)" stroke="#A7F3D0" stroke-width="1.5"/>
-    <ellipse cx="-6" cy="-7" rx="6" ry="3.5" fill="#FFFFFF" fill-opacity="0.55" transform="rotate(-25 -6 -7)"/>
-  </g>
+    <circle r="3" fill="#34D399">
+      <animateMotion dur="2.9s" begin="1.1s" repeatCount="indefinite" path="M 720,76 L 835,76 L 855,96 L 970,96"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="2.9s" begin="1.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.8" fill="#6EE7B7">
+      <animateMotion dur="2.6s" begin="0.4s" repeatCount="indefinite" path="M 650,94 L 740,94 L 762,72 L 820,72"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="2.6s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
 
-  <!-- Cabecera de Sección -->
-  <rect x="112" y="30" width="166" height="24" rx="12" fill="#10B981" fill-opacity="0.22" stroke="#6EE7B7" stroke-opacity="0.6" stroke-width="1"/>
-  <text x="195" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#A7F3D0">ORBE 01  •  ESMERALDA</text>
+    <!-- Esporas esmeralda flotando hacia arriba -->
+    <circle cx="880" cy="260" r="2.5" fill="#6EE7B7">
+      <animate attributeName="cy" values="270;110" dur="5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0" dur="5.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="940" cy="250" r="3" fill="#34D399">
+      <animate attributeName="cy" values="275;120" dur="6.4s" begin="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.75;0" dur="6.4s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="265" r="2.2" fill="#A7F3D0">
+      <animate attributeName="cy" values="275;140" dur="4.8s" begin="0.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="4.8s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
 
-  <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Arquitectura Backend &amp; Datos</text>
-  <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#D1FAE5" fill-opacity="0.88">Sistemas de alto rendimiento, diseño Database-First y aislamiento multi-tenant de nivel producción</text>
+    <!-- Orbe Esmeralda con Anillo Orbital Rotatorio -->
+    <g transform="translate(62, 62)">
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#6EE7B7" stroke-opacity="0.45" stroke-width="1.3" stroke-dasharray="10 6">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+      </circle>
+      <g>
+        <circle cx="35" cy="0" r="3.6" fill="#A7F3D0"/>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4.5s" repeatCount="indefinite"/>
+      </g>
+      <circle cx="0" cy="0" r="29" fill="#10B981" fill-opacity="0.2">
+        <animate attributeName="r" values="26;32;26" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="21" fill="url(#orb-sphere-em)" stroke="#A7F3D0" stroke-width="1.5"/>
+      <ellipse cx="-6" cy="-7" rx="5.5" ry="3.2" fill="#FFFFFF" fill-opacity="0.58" transform="rotate(-25 -6 -7)"/>
+    </g>
 
-  <!-- Chips de Tecnologías (7 en fila) -->
-  
+    <!-- Cabecera -->
+    <rect x="112" y="30" width="166" height="24" rx="12" fill="#10B981" fill-opacity="0.24" stroke="#6EE7B7" stroke-opacity="0.65" stroke-width="1"/>
+    <text x="195" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#A7F3D0">ORBE 01  •  ESMERALDA</text>
+
+    <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Arquitectura Backend &amp; Datos</text>
+    <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#D1FAE5" fill-opacity="0.88">Sistemas de alto rendimiento, diseño Database-First y aislamiento multi-tenant de nivel producción</text>
+
+    <!-- 7 Chips con Ola Secuencial -->
+    
     <g transform="translate(28, 128)">
-      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
-      <rect x="0" y="0" width="127" height="4" rx="2" fill="#34D399"/>
-      <circle cx="16" cy="28" r="5" fill="#34D399"/>
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.78)" stroke="rgba(110, 231, 183, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.00s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#34D399">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.00s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="16" cy="28" r="5" fill="#34D399">
+        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="0.00s" repeatCount="indefinite"/>
+      </circle>
       <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">PostgreSQL</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Motor SQL</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Motor SQL</text>
     </g>
     <g transform="translate(164, 128)">
-      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
-      <rect x="0" y="0" width="127" height="4" rx="2" fill="#10B981"/>
-      <circle cx="16" cy="28" r="5" fill="#10B981"/>
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.78)" stroke="rgba(110, 231, 183, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.35s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#10B981">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.35s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="16" cy="28" r="5" fill="#10B981">
+        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="0.35s" repeatCount="indefinite"/>
+      </circle>
       <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Supabase</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Cloud DB</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Cloud DB</text>
     </g>
     <g transform="translate(300, 128)">
-      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
-      <rect x="0" y="0" width="127" height="4" rx="2" fill="#FB7185"/>
-      <circle cx="16" cy="28" r="5" fill="#FB7185"/>
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.78)" stroke="rgba(110, 231, 183, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.70s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#FB7185">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.70s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="16" cy="28" r="5" fill="#FB7185">
+        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="0.70s" repeatCount="indefinite"/>
+      </circle>
       <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">NestJS</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Framework</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Framework</text>
     </g>
     <g transform="translate(436, 128)">
-      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
-      <rect x="0" y="0" width="127" height="4" rx="2" fill="#4ADE80"/>
-      <circle cx="16" cy="28" r="5" fill="#4ADE80"/>
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.78)" stroke="rgba(110, 231, 183, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.05s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#4ADE80">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.05s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="16" cy="28" r="5" fill="#4ADE80">
+        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="1.05s" repeatCount="indefinite"/>
+      </circle>
       <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Node.js</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Runtime</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Runtime</text>
     </g>
     <g transform="translate(572, 128)">
-      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
-      <rect x="0" y="0" width="127" height="4" rx="2" fill="#2DD4BF"/>
-      <circle cx="16" cy="28" r="5" fill="#2DD4BF"/>
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.78)" stroke="rgba(110, 231, 183, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.40s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#2DD4BF">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.40s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="16" cy="28" r="5" fill="#2DD4BF">
+        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="1.40s" repeatCount="indefinite"/>
+      </circle>
       <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Prisma ORM</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Type-Safe</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Type-Safe</text>
     </g>
     <g transform="translate(708, 128)">
-      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
-      <rect x="0" y="0" width="127" height="4" rx="2" fill="#FB923C"/>
-      <circle cx="16" cy="28" r="5" fill="#FB923C"/>
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.78)" stroke="rgba(110, 231, 183, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#FB923C">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="16" cy="28" r="5" fill="#FB923C">
+        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="1.75s" repeatCount="indefinite"/>
+      </circle>
       <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">TypeORM</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">Entidades</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Entidades</text>
     </g>
     <g transform="translate(844, 128)">
-      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.74)" stroke="rgba(110, 231, 183, 0.35)" stroke-width="1.2"/>
-      <rect x="0" y="0" width="127" height="4" rx="2" fill="#F87171"/>
-      <circle cx="16" cy="28" r="5" fill="#F87171"/>
+      <rect x="0" y="0" width="127" height="52" rx="12" fill="rgba(2, 24, 20, 0.78)" stroke="rgba(110, 231, 183, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="2.10s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="0" y="0" width="127" height="4" rx="2" fill="#F87171">
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="2.10s" repeatCount="indefinite"/>
+      </rect>
+      <circle cx="16" cy="28" r="5" fill="#F87171">
+        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="2.10s" repeatCount="indefinite"/>
+      </circle>
       <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Redis Cache</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.68">In-Memory</text>
+      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">In-Memory</text>
     </g>
 
-  <!-- 3 Pilares Arquitectónicos -->
-  <g transform="translate(28, 204)">
-    <rect x="0" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.82" stroke="#34D399" stroke-opacity="0.45" stroke-width="1.2"/>
-    <circle cx="22" cy="25" r="5" fill="#34D399"/>
-    <text x="38" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">ARQUITECTURA</text>
-    <text x="38" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">Database-First &amp; Escalable</text>
+    <!-- 3 Pilares Arquitectónicos con Pulso -->
+    <g transform="translate(28, 204)">
+      <rect x="0" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.86" stroke="#34D399" stroke-opacity="0.5" stroke-width="1.2"/>
+      <circle cx="22" cy="25" r="5" fill="#34D399"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0s" repeatCount="indefinite"/></circle>
+      <text x="38" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">ARQUITECTURA</text>
+      <text x="38" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">Database-First &amp; Escalable</text>
 
-    <rect x="320" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.82" stroke="#34D399" stroke-opacity="0.45" stroke-width="1.2"/>
-    <circle cx="342" cy="25" r="5" fill="#34D399"/>
-    <text x="358" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">SEGURIDAD</text>
-    <text x="358" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">JWT, RBAC &amp; Multi-Tenant</text>
+      <rect x="320" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.86" stroke="#34D399" stroke-opacity="0.5" stroke-width="1.2"/>
+      <circle cx="342" cy="25" r="5" fill="#34D399"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.65s" repeatCount="indefinite"/></circle>
+      <text x="358" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">SEGURIDAD</text>
+      <text x="358" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">JWT, RBAC &amp; Multi-Tenant</text>
 
-    <rect x="640" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.82" stroke="#34D399" stroke-opacity="0.45" stroke-width="1.2"/>
-    <circle cx="662" cy="25" r="5" fill="#34D399"/>
-    <text x="678" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">DOCUMENTACIÓN API</text>
-    <text x="678" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">Swagger OpenAPI &amp; Contratos</text>
+      <rect x="640" y="0" width="304" height="50" rx="13" fill="#022C22" fill-opacity="0.86" stroke="#34D399" stroke-opacity="0.5" stroke-width="1.2"/>
+      <circle cx="662" cy="25" r="5" fill="#34D399"><animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1.3s" repeatCount="indefinite"/></circle>
+      <text x="678" y="22" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#6EE7B7">DOCUMENTACIÓN API</text>
+      <text x="678" y="39" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="800" fill="#FFFFFF">Swagger OpenAPI &amp; Contratos</text>
+    </g>
   </g>
+  <rect x="2" y="2" width="996" height="281" rx="22" fill="none" stroke="#34D399" stroke-opacity="0.62" stroke-width="1.8"/>
 </svg>

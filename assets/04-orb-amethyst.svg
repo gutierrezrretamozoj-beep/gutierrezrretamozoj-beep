@@ -1,12 +1,15 @@
 <svg width="1000" height="416" viewBox="0 0 1000 416" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <clipPath id="clip-am"><rect x="2" y="2" width="996" height="412" rx="22"/></clipPath>
     <linearGradient id="bg-amethyst" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#14092E"/>
       <stop offset="50%" stop-color="#2E1065"/>
       <stop offset="100%" stop-color="#170C38"/>
     </linearGradient>
     <radialGradient id="glow-amethyst" cx="50%" cy="15%" r="60%">
-      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.42"/>
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.46">
+        <animate attributeName="stop-opacity" values="0.32;0.54;0.32" dur="4.2s" repeatCount="indefinite"/>
+      </stop>
       <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="orb-sphere-am" cx="35%" cy="30%" r="70%">
@@ -19,102 +22,166 @@
     </pattern>
   </defs>
 
-  <rect x="2" y="2" width="996" height="412" rx="22" fill="url(#bg-amethyst)" stroke="#A78BFA" stroke-opacity="0.58" stroke-width="1.8"/>
-  <rect x="2" y="2" width="996" height="412" rx="22" fill="url(#grid-am)"/>
-  <rect x="2" y="2" width="996" height="412" rx="22" fill="url(#glow-amethyst)"/>
+  <g clip-path="url(#clip-am)">
+    <rect x="2" y="2" width="996" height="412" rx="22" fill="url(#bg-amethyst)"/>
+    <rect x="2" y="2" width="996" height="412" rx="22" fill="url(#grid-am)"/>
+    <rect x="2" y="2" width="996" height="412" rx="22" fill="url(#glow-amethyst)"/>
 
-  <!-- Estrellas sutiles -->
-  <circle cx="885" cy="44" r="2" fill="#EDE9FE"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite"/></circle>
-  <circle cx="935" cy="72" r="2.5" fill="#FDE68A"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.2s" repeatCount="indefinite"/></circle>
-  <circle cx="845" cy="82" r="1.8" fill="#C4B5FD"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="2.9s" repeatCount="indefinite"/></circle>
+    <!-- CONSTELACIÓN ANIMADA EN EL CIELO AMATISTA -->
+    <g stroke="#C4B5FD" stroke-opacity="0.32" stroke-width="1.2">
+      <line x1="770" y1="42" x2="835" y2="72"/>
+      <line x1="835" y1="72" x2="890" y2="38"/>
+      <line x1="890" y1="38" x2="948" y2="66"/>
+      <line x1="835" y1="72" x2="905" y2="92"/>
+    </g>
+    <circle cx="770" cy="42" r="2.6" fill="#EDE9FE"><animate attributeName="r" values="2;4;2" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="835" cy="72" r="3" fill="#FDE68A"><animate attributeName="r" values="2.2;4.4;2.2" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="890" cy="38" r="2.8" fill="#F9A8D4"><animate attributeName="r" values="2;4.2;2" dur="2.7s" begin="0.6s" repeatCount="indefinite"/></circle>
+    <circle cx="948" cy="66" r="3.2" fill="#7DD3FC"><animate attributeName="r" values="2.4;4.5;2.4" dur="3.3s" begin="1.1s" repeatCount="indefinite"/></circle>
+    <circle cx="905" cy="92" r="2.4" fill="#6EE7B7"><animate attributeName="r" values="1.8;3.8;1.8" dur="2.9s" begin="0.4s" repeatCount="indefinite"/></circle>
 
-  <!-- Orbe Amatista Animado -->
-  <g transform="translate(62, 62)">
-    <circle cx="0" cy="0" r="34" fill="#8B5CF6" fill-opacity="0.2">
-      <animate attributeName="r" values="30;37;30" dur="3.6s" repeatCount="indefinite"/>
-      <animate attributeName="fill-opacity" values="0.14;0.3;0.14" dur="3.6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="0" r="22" fill="url(#orb-sphere-am)" stroke="#EDE9FE" stroke-width="1.5"/>
-    <ellipse cx="-6" cy="-7" rx="6" ry="3.5" fill="#FFFFFF" fill-opacity="0.55" transform="rotate(-25 -6 -7)"/>
-  </g>
+    <!-- Estrella fugaz sutil -->
+    <g opacity="0">
+      <line x1="0" y1="0" x2="68" y2="18" stroke="#EDE9FE" stroke-width="2" stroke-linecap="round"/>
+      <animateTransform attributeName="transform" type="translate" values="610,18; 920,96; 920,96" keyTimes="0;0.22;1" dur="5.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0;0" keyTimes="0;0.08;0.22;1" dur="5.8s" repeatCount="indefinite"/>
+    </g>
 
-  <rect x="112" y="30" width="166" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.26" stroke="#C4B5FD" stroke-opacity="0.65" stroke-width="1"/>
-  <text x="195" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#EDE9FE">ORBE 03  •  AMATISTA</text>
+    <!-- Orbe Amatista con Anillo Rúnico Giratorio -->
+    <g transform="translate(62, 62)">
+      <circle cx="0" cy="0" r="35" fill="none" stroke="#C4B5FD" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="6 6">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="28" fill="none" stroke="#F9A8D4" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="14 8">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="21" fill="url(#orb-sphere-am)" stroke="#EDE9FE" stroke-width="1.5"/>
+      <ellipse cx="-6" cy="-7" rx="5.5" ry="3.2" fill="#FFFFFF" fill-opacity="0.58" transform="rotate(-25 -6 -7)"/>
+    </g>
 
-  <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Misiones &amp; Construcciones del Mundo</text>
-  <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.9">Portales reales construidos con ingeniería full-stack y experiencias memorables</text>
+    <rect x="112" y="30" width="166" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.28" stroke="#C4B5FD" stroke-opacity="0.65" stroke-width="1"/>
+    <text x="195" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#EDE9FE">ORBE 03  •  AMATISTA</text>
 
-  
-  <g transform="translate(28, 126)">
-    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.86" stroke="#A78BFA" stroke-opacity="0.38" stroke-width="1.3"/>
-    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#F59E0B"/>
-    <circle cx="24" cy="30" r="6" fill="#F59E0B"/>
-    <text x="40" y="36" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="900" fill="#FFFFFF">David's World 3D</text>
-    <rect x="326" y="16" width="122" height="22" rx="11" fill="#F59E0B" fill-opacity="0.2" stroke="#F59E0B" stroke-opacity="0.65" stroke-width="1"/>
-    <text x="387" y="31" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" letter-spacing="0.8" fill="#FFFFFF">EN VIVO 3D</text>
-    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.9">Mundo 3D jugable con valle interactivo, fauna y 5 orbes.</text>
+    <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Misiones &amp; Construcciones del Mundo</text>
+    <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.9">Portales reales construidos con ingeniería full-stack y experiencias memorables</text>
+
     
-      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.45" stroke-width="1"/>
+  <g transform="translate(28, 126)">
+    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.88" stroke="#A78BFA" stroke-opacity="0.42" stroke-width="1.3">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="4s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#F59E0B" fill-opacity="0.45"/>
+    <!-- Haz de luz viajando por el borde superior de cada tarjeta -->
+    <rect x="0" y="0" width="92" height="4.5" rx="2" fill="#F59E0B">
+      <animate attributeName="x" values="0;372;0" dur="4.2s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Baliza radar viva -->
+    <circle cx="24" cy="30" r="6" fill="none" stroke="#F59E0B" stroke-width="1.5">
+      <animate attributeName="r" values="5;14" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="24" cy="30" r="5.5" fill="#F59E0B"/>
+    <text x="40" y="36" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="900" fill="#FFFFFF">David's World 3D</text>
+    <rect x="326" y="16" width="122" height="22" rx="11" fill="#F59E0B" fill-opacity="0.22" stroke="#F59E0B" stroke-opacity="0.7" stroke-width="1"/>
+    <text x="387" y="31" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" letter-spacing="0.8" fill="#FFFFFF">EN VIVO 3D</text>
+    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.92">Mundo 3D jugable con valle interactivo, fauna y 5 orbes.</text>
+    
+      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.48" stroke-width="1"/>
       <text x="68.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">React 19</text>
-      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.48" stroke-width="1"/>
       <text x="176.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Three.js</text>
-      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.48" stroke-width="1"/>
       <text x="284.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">TypeScript</text>
-      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.48" stroke-width="1"/>
       <text x="392.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Vite</text>
   </g>
   <g transform="translate(508, 126)">
-    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.86" stroke="#A78BFA" stroke-opacity="0.38" stroke-width="1.3"/>
-    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#10B981"/>
-    <circle cx="24" cy="30" r="6" fill="#10B981"/>
+    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.88" stroke="#A78BFA" stroke-opacity="0.42" stroke-width="1.3">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="4s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#10B981" fill-opacity="0.45"/>
+    <!-- Haz de luz viajando por el borde superior de cada tarjeta -->
+    <rect x="0" y="0" width="92" height="4.5" rx="2" fill="#10B981">
+      <animate attributeName="x" values="0;372;0" dur="4.2s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Baliza radar viva -->
+    <circle cx="24" cy="30" r="6" fill="none" stroke="#10B981" stroke-width="1.5">
+      <animate attributeName="r" values="5;14" dur="2.2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="2.2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="24" cy="30" r="5.5" fill="#10B981"/>
     <text x="40" y="36" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="900" fill="#FFFFFF">Wildlife Sanctuary SaaS</text>
-    <rect x="326" y="16" width="122" height="22" rx="11" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-opacity="0.65" stroke-width="1"/>
+    <rect x="326" y="16" width="122" height="22" rx="11" fill="#10B981" fill-opacity="0.22" stroke="#10B981" stroke-opacity="0.7" stroke-width="1"/>
     <text x="387" y="31" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" letter-spacing="0.8" fill="#FFFFFF">SAAS MULTI-TENANT</text>
-    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.9">SaaS multi-tenant para fauna silvestre, recintos y bitácoras.</text>
+    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.92">SaaS multi-tenant para fauna silvestre, recintos y bitácoras.</text>
     
-      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.48" stroke-width="1"/>
       <text x="68.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Next.js</text>
-      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.48" stroke-width="1"/>
       <text x="176.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">TypeORM</text>
-      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.48" stroke-width="1"/>
       <text x="284.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">PostgreSQL</text>
-      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#10B981" stroke-opacity="0.48" stroke-width="1"/>
       <text x="392.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Redis</text>
   </g>
   <g transform="translate(28, 266)">
-    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.86" stroke="#A78BFA" stroke-opacity="0.38" stroke-width="1.3"/>
-    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#38BDF8"/>
-    <circle cx="24" cy="30" r="6" fill="#38BDF8"/>
+    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.88" stroke="#A78BFA" stroke-opacity="0.42" stroke-width="1.3">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="4s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#38BDF8" fill-opacity="0.45"/>
+    <!-- Haz de luz viajando por el borde superior de cada tarjeta -->
+    <rect x="0" y="0" width="92" height="4.5" rx="2" fill="#38BDF8">
+      <animate attributeName="x" values="0;372;0" dur="4.2s" begin="2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Baliza radar viva -->
+    <circle cx="24" cy="30" r="6" fill="none" stroke="#38BDF8" stroke-width="1.5">
+      <animate attributeName="r" values="5;14" dur="2.2s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="2.2s" begin="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="24" cy="30" r="5.5" fill="#38BDF8"/>
     <text x="40" y="36" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="900" fill="#FFFFFF">Cospace Booking</text>
-    <rect x="326" y="16" width="122" height="22" rx="11" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-opacity="0.65" stroke-width="1"/>
+    <rect x="326" y="16" width="122" height="22" rx="11" fill="#38BDF8" fill-opacity="0.22" stroke="#38BDF8" stroke-opacity="0.7" stroke-width="1"/>
     <text x="387" y="31" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" letter-spacing="0.8" fill="#FFFFFF">RESERVAS CLOUD</text>
-    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.9">Reservas inteligentes de espacios colaborativos en tiempo real.</text>
+    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.92">Reservas inteligentes de espacios colaborativos en tiempo real.</text>
     
-      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.48" stroke-width="1"/>
       <text x="68.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Next.js</text>
-      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.48" stroke-width="1"/>
       <text x="176.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Prisma</text>
-      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.48" stroke-width="1"/>
       <text x="284.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Supabase</text>
-      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#38BDF8" stroke-opacity="0.48" stroke-width="1"/>
       <text x="392.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Tailwind</text>
   </g>
   <g transform="translate(508, 266)">
-    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.86" stroke="#A78BFA" stroke-opacity="0.38" stroke-width="1.3"/>
-    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#F43F5E"/>
-    <circle cx="24" cy="30" r="6" fill="#F43F5E"/>
+    <rect x="0" y="0" width="464" height="124" rx="16" fill="#120929" fill-opacity="0.88" stroke="#A78BFA" stroke-opacity="0.42" stroke-width="1.3">
+      <animate attributeName="stroke-opacity" values="0.35;0.85;0.35" dur="4s" begin="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="464" height="4.5" rx="2" fill="#F43F5E" fill-opacity="0.45"/>
+    <!-- Haz de luz viajando por el borde superior de cada tarjeta -->
+    <rect x="0" y="0" width="92" height="4.5" rx="2" fill="#F43F5E">
+      <animate attributeName="x" values="0;372;0" dur="4.2s" begin="3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Baliza radar viva -->
+    <circle cx="24" cy="30" r="6" fill="none" stroke="#F43F5E" stroke-width="1.5">
+      <animate attributeName="r" values="5;14" dur="2.2s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="2.2s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="24" cy="30" r="5.5" fill="#F43F5E"/>
     <text x="40" y="36" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="900" fill="#FFFFFF">Vice City Complex</text>
-    <rect x="326" y="16" width="122" height="22" rx="11" fill="#F43F5E" fill-opacity="0.2" stroke="#F43F5E" stroke-opacity="0.65" stroke-width="1"/>
+    <rect x="326" y="16" width="122" height="22" rx="11" fill="#F43F5E" fill-opacity="0.22" stroke="#F43F5E" stroke-opacity="0.7" stroke-width="1"/>
     <text x="387" y="31" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" letter-spacing="0.8" fill="#FFFFFF">BACKEND API</text>
-    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.9">API empresarial escalable con Swagger, RBAC y JWT.</text>
+    <text x="18" y="64" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500" fill="#DDD6FE" fill-opacity="0.92">API empresarial escalable con Swagger, RBAC y JWT.</text>
     
-      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="18" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.48" stroke-width="1"/>
       <text x="68.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">PostgreSQL</text>
-      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="126" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.48" stroke-width="1"/>
       <text x="176.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">NestJS</text>
-      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="234" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.48" stroke-width="1"/>
       <text x="284.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">Swagger</text>
-      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.45" stroke-width="1"/>
+      <rect x="342" y="86" width="101" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.08" stroke="#F43F5E" stroke-opacity="0.48" stroke-width="1"/>
       <text x="392.5" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="10.5" font-weight="700" fill="#F5F3FF">JWT</text>
   </g>
+  </g>
+  <rect x="2" y="2" width="996" height="412" rx="22" fill="none" stroke="#A78BFA" stroke-opacity="0.62" stroke-width="1.8"/>
 </svg>

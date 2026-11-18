@@ -1,12 +1,16 @@
-<svg width="1000" height="232" viewBox="0 0 1000 232" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="236" viewBox="0 0 1000 236" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <clipPath id="clip-cy"><rect x="2" y="2" width="996" height="232" rx="22"/></clipPath>
+    <clipPath id="mail-clip"><rect x="652" y="128" width="320" height="74" rx="14"/></clipPath>
     <linearGradient id="bg-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#04192B"/>
       <stop offset="50%" stop-color="#0B3D60"/>
       <stop offset="100%" stop-color="#062138"/>
     </linearGradient>
     <radialGradient id="glow-cyan" cx="15%" cy="20%" r="55%">
-      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.4"/>
+      <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.44">
+        <animate attributeName="stop-opacity" values="0.28;0.5;0.28" dur="3.8s" repeatCount="indefinite"/>
+      </stop>
       <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="orb-sphere-cy" cx="35%" cy="30%" r="70%">
@@ -14,43 +18,68 @@
       <stop offset="45%" stop-color="#0EA5E9"/>
       <stop offset="100%" stop-color="#0369A1"/>
     </radialGradient>
+    <linearGradient id="mail-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FDE68A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FDE68A" stop-opacity="0"/>
+    </linearGradient>
     <pattern id="grid-cy" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#7DD3FC" stroke-opacity="0.06" stroke-width="1"/>
     </pattern>
   </defs>
 
-  <rect x="2" y="2" width="996" height="228" rx="22" fill="url(#bg-cyan)" stroke="#38BDF8" stroke-opacity="0.58" stroke-width="1.8"/>
-  <rect x="2" y="2" width="996" height="228" rx="22" fill="url(#grid-cy)"/>
-  <rect x="2" y="2" width="996" height="228" rx="22" fill="url(#glow-cyan)"/>
+  <g clip-path="url(#clip-cy)">
+    <rect x="2" y="2" width="996" height="232" rx="22" fill="url(#bg-cyan)"/>
+    <rect x="2" y="2" width="996" height="232" rx="22" fill="url(#grid-cy)"/>
+    <rect x="2" y="2" width="996" height="232" rx="22" fill="url(#glow-cyan)"/>
 
-  <!-- Orbe Cian Animado -->
-  <g transform="translate(62, 62)">
-    <circle cx="0" cy="0" r="34" fill="#0EA5E9" fill-opacity="0.2">
-      <animate attributeName="r" values="30;37;30" dur="3.5s" repeatCount="indefinite"/>
-      <animate attributeName="fill-opacity" values="0.14;0.3;0.14" dur="3.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="0" r="22" fill="url(#orb-sphere-cy)" stroke="#E0F2FE" stroke-width="1.5"/>
-    <ellipse cx="-6" cy="-7" rx="6" ry="3.5" fill="#FFFFFF" fill-opacity="0.6" transform="rotate(-25 -6 -7)"/>
+    <!-- Olas bioluminiscentes suaves en la parte inferior -->
+    <path d="M0,214 Q250,196 500,214 T1000,214 L1000,236 L0,236 Z" fill="#38BDF8" fill-opacity="0.14">
+      <animate attributeName="d" values="M0,214 Q250,196 500,214 T1000,214 L1000,236 L0,236 Z;M0,214 Q250,230 500,214 T1000,214 L1000,236 L0,236 Z;M0,214 Q250,196 500,214 T1000,214 L1000,236 L0,236 Z" dur="5.5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Burbujas cian elevándose -->
+    <circle cx="845" cy="120" r="3" fill="#7DD3FC"><animate attributeName="cy" values="125;22" dur="4.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.85;0" dur="4.4s" repeatCount="indefinite"/></circle>
+    <circle cx="910" cy="115" r="4" fill="#38BDF8"><animate attributeName="cy" values="125;18" dur="5.6s" begin="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.75;0" dur="5.6s" begin="1.5s" repeatCount="indefinite"/></circle>
+    <circle cx="952" cy="120" r="2.5" fill="#E0F2FE"><animate attributeName="cy" values="122;30" dur="3.9s" begin="0.7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0" dur="3.9s" begin="0.7s" repeatCount="indefinite"/></circle>
+
+    <!-- Orbe Cian con Ondas Sonar Concéntricas -->
+    <g transform="translate(62, 62)">
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#38BDF8" stroke-width="1.6">
+        <animate attributeName="r" values="22;46" dur="2.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.85;0" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#7DD3FC" stroke-width="1.4">
+        <animate attributeName="r" values="22;46" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.85;0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="21" fill="url(#orb-sphere-cy)" stroke="#E0F2FE" stroke-width="1.5"/>
+      <ellipse cx="-6" cy="-7" rx="5.5" ry="3.2" fill="#FFFFFF" fill-opacity="0.6" transform="rotate(-25 -6 -7)"/>
+    </g>
+
+    <rect x="112" y="30" width="136" height="24" rx="12" fill="#0EA5E9" fill-opacity="0.26" stroke="#7DD3FC" stroke-opacity="0.65" stroke-width="1"/>
+    <text x="180" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#E0F2FE">ORBE 05  •  CIAN</text>
+
+    <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Cabaña del Viajero &amp; Contacto</text>
+    <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#E0F2FE" fill-opacity="0.88">¿Tienes una idea ambiciosa, un proyecto 3D o un reto full-stack? Haz clic para escribirme</text>
+
+    <!-- 3 Tarjetas de Contacto -->
+    <rect x="28" y="128" width="290" height="74" rx="14" fill="#041829" fill-opacity="0.86" stroke="#38BDF8" stroke-opacity="0.48" stroke-width="1.3"/>
+    <text x="48" y="156" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="800" letter-spacing="1.1" fill="#7DD3FC">UBICACIÓN</text>
+    <text x="48" y="181" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Barranquilla, Colombia</text>
+
+    <rect x="334" y="128" width="302" height="74" rx="14" fill="#041829" fill-opacity="0.86" stroke="#38BDF8" stroke-opacity="0.48" stroke-width="1.3"/>
+    <text x="354" y="156" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="800" letter-spacing="1.1" fill="#7DD3FC">ROL PRINCIPAL</text>
+    <text x="354" y="181" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Full-Stack Software Engineer</text>
+
+    <rect x="652" y="128" width="320" height="74" rx="14" fill="#0B3554" fill-opacity="0.94" stroke="#FBBF24" stroke-width="1.6"/>
+    <g clip-path="url(#mail-clip)">
+      <rect x="570" y="120" width="90" height="90" fill="url(#mail-sheen)" transform="skewX(-22)">
+        <animate attributeName="x" values="570;1050;1050" keyTimes="0;0.38;1" dur="3.6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <text x="672" y="156" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="800" letter-spacing="1.1" fill="#FDE68A">CORREO DIRECTO  →</text>
+    <text x="672" y="181" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#FFFFFF">gutierrezrretamozoj@gmail.com</text>
   </g>
-
-  <rect x="112" y="30" width="136" height="24" rx="12" fill="#0EA5E9" fill-opacity="0.24" stroke="#7DD3FC" stroke-opacity="0.65" stroke-width="1"/>
-  <text x="180" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#E0F2FE">ORBE 05  •  CIAN</text>
-
-  <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Cabaña del Viajero &amp; Contacto</text>
-  <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#E0F2FE" fill-opacity="0.88">¿Tienes una idea ambiciosa, un proyecto 3D o un reto full-stack? Haz clic para escribirme</text>
-
-  <!-- 3 Tarjetas de Contacto -->
-  <g transform="translate(28, 128)">
-    <rect x="0" y="0" width="290" height="74" rx="14" fill="#041829" fill-opacity="0.82" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1.3"/>
-    <text x="20" y="28" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="800" letter-spacing="1.1" fill="#7DD3FC">UBICACIÓN</text>
-    <text x="20" y="53" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Barranquilla, Colombia</text>
-
-    <rect x="306" y="0" width="302" height="74" rx="14" fill="#041829" fill-opacity="0.82" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1.3"/>
-    <text x="326" y="28" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="800" letter-spacing="1.1" fill="#7DD3FC">ROL PRINCIPAL</text>
-    <text x="326" y="53" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">Full-Stack Software Engineer</text>
-
-    <rect x="624" y="0" width="320" height="74" rx="14" fill="#0B3554" fill-opacity="0.92" stroke="#FBBF24" stroke-opacity="0.85" stroke-width="1.5"/>
-    <text x="644" y="28" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="800" letter-spacing="1.1" fill="#FDE68A">CORREO DIRECTO  →</text>
-    <text x="644" y="53" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="800" fill="#FFFFFF">gutierrezrretamozoj@gmail.com</text>
-  </g>
+  <rect x="2" y="2" width="996" height="232" rx="22" fill="none" stroke="#38BDF8" stroke-opacity="0.62" stroke-width="1.8"/>
 </svg>

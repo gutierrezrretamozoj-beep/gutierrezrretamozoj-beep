@@ -4,10 +4,26 @@
       <stop offset="0%" stop-color="#082F49"/>
       <stop offset="100%" stop-color="#0369A1"/>
     </linearGradient>
+    <linearGradient id="sh-proj-cospace" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="cp-proj-cospace">
+      <rect x="1.5" y="1.5" width="237" height="59" rx="14"/>
+    </clipPath>
   </defs>
-  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-proj-cospace)" stroke="#7DD3FC" stroke-width="1.6"/>
-  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.14"/>
+  <g clip-path="url(#cp-proj-cospace)">
+    <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-proj-cospace)"/>
+    <rect x="-90" y="-10" width="75" height="82" fill="url(#sh-proj-cospace)" transform="skewX(-22)">
+      <animate attributeName="x" values="-90;310;310" keyTimes="0;0.32;1" dur="4.2s" begin="1.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="none" stroke="#7DD3FC" stroke-width="1.6">
+    <animate attributeName="stroke-opacity" values="0.65;1;0.65" dur="3s" begin="1.4s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.16"/>
   <g transform="translate(18, 19)"><rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="#E0F2FE" stroke-width="2"/><line x1="4" y1="10" x2="20" y2="10" stroke="#E0F2FE" stroke-width="2"/><line x1="10" y1="10" x2="10" y2="20" stroke="#E0F2FE" stroke-width="2"/></g>
   <text x="59" y="29" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5" fill="#FFFFFF">COSPACE BOOKING</text>
-  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.82">Ver repositorios ↗</text>
+  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.86">Ver repositorios ↗</text>
 </svg>

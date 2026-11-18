@@ -4,10 +4,26 @@
       <stop offset="0%" stop-color="#451A03"/>
       <stop offset="100%" stop-color="#B45309"/>
     </linearGradient>
+    <linearGradient id="sh-proj-world" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="cp-proj-world">
+      <rect x="1.5" y="1.5" width="237" height="59" rx="14"/>
+    </clipPath>
   </defs>
-  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-proj-world)" stroke="#FDE68A" stroke-width="1.6"/>
-  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.14"/>
+  <g clip-path="url(#cp-proj-world)">
+    <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-proj-world)"/>
+    <rect x="-90" y="-10" width="75" height="82" fill="url(#sh-proj-world)" transform="skewX(-22)">
+      <animate attributeName="x" values="-90;310;310" keyTimes="0;0.32;1" dur="4.2s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="none" stroke="#FDE68A" stroke-width="1.6">
+    <animate attributeName="stroke-opacity" values="0.65;1;0.65" dur="3s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.16"/>
   <g transform="translate(18, 19)"><polygon points="9,6 9,18 19,12" fill="#FEF3C7"/></g>
   <text x="59" y="29" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5" fill="#FFFFFF">DAVID'S WORLD 3D</text>
-  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.82">Abrir juego en vivo ↗</text>
+  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.86">Abrir juego en vivo ↗</text>
 </svg>

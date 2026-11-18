@@ -1,5 +1,6 @@
 <svg width="1000" height="106" viewBox="0 0 1000 106" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <clipPath id="clip-rad"><rect x="2" y="2" width="996" height="102" rx="20"/></clipPath>
     <linearGradient id="bg-radar" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1A103D"/>
       <stop offset="50%" stop-color="#311457"/>
@@ -10,22 +11,42 @@
       <stop offset="50%" stop-color="#EC4899"/>
       <stop offset="100%" stop-color="#FBBF24"/>
     </linearGradient>
+    <linearGradient id="scan-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#C084FC" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
-  <rect x="2" y="2" width="996" height="102" rx="20" fill="url(#bg-radar)" stroke="#C084FC" stroke-opacity="0.55" stroke-width="1.6"/>
+  <g clip-path="url(#clip-rad)">
+    <rect x="2" y="2" width="996" height="102" rx="20" fill="url(#bg-radar)"/>
+    <!-- Haz escáner horizontal -->
+    <rect x="-180" y="0" width="180" height="106" fill="url(#scan-bar)">
+      <animate attributeName="x" values="-180;1060" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
 
-  <!-- Pulso radar animado -->
-  <polyline points="30,54 70,54 84,30 98,76 112,42 124,54 165,54" fill="none" stroke="url(#pulse-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="165" cy="54" r="5" fill="#FDE68A">
-    <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
-  </circle>
+    <!-- Línea base ECG tenue + pulso vivo recorriéndola -->
+    <polyline points="28,54 68,54 82,26 96,80 110,40 124,54 166,54" fill="none" stroke="#C084FC" stroke-opacity="0.22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="28,54 68,54 82,26 96,80 110,40 124,54 166,54" fill="none" stroke="url(#pulse-line)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="190" stroke-dashoffset="190">
+      <animate attributeName="stroke-dashoffset" values="190;0;-190" dur="2.6s" repeatCount="indefinite"/>
+    </polyline>
+    <circle cx="166" cy="54" r="5" fill="#FDE68A">
+      <animate attributeName="r" values="3.5;6.5;3.5" dur="1.3s" repeatCount="indefinite"/>
+    </circle>
 
-  <text x="192" y="47" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">Radar de Actividad &amp; Energía del Valle</text>
-  <text x="192" y="72" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#E9D5FF" fill-opacity="0.88">Estadísticas en vivo de GitHub, lenguajes dominantes y pulso de commits en tiempo real</text>
+    <text x="192" y="47" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">Radar de Actividad &amp; Energía del Valle</text>
+    <text x="192" y="72" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#E9D5FF" fill-opacity="0.88">Estadísticas en vivo de GitHub, lenguajes dominantes y pulso de commits en tiempo real</text>
 
-  <rect x="822" y="34" width="148" height="36" rx="18" fill="#0F172A" fill-opacity="0.72" stroke="#34D399" stroke-opacity="0.7" stroke-width="1.2"/>
-  <circle cx="844" cy="52" r="5" fill="#34D399">
-    <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
-  </circle>
-  <text x="858" y="57" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="11.5" font-weight="700" fill="#A7F3D0">LIVE METRICS</text>
+    <!-- Badge LIVE METRICS con mini radar giratorio -->
+    <rect x="808" y="32" width="164" height="40" rx="20" fill="#0F172A" fill-opacity="0.78" stroke="#34D399" stroke-opacity="0.75" stroke-width="1.3"/>
+    <g transform="translate(832, 52)">
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#34D399" stroke-opacity="0.45" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="0" y2="-9" stroke="#34D399" stroke-width="2" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="indefinite"/>
+      </line>
+      <circle cx="0" cy="0" r="2.2" fill="#A7F3D0"/>
+    </g>
+    <text x="852" y="57" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="12" font-weight="800" fill="#A7F3D0">LIVE METRICS</text>
+  </g>
+  <rect x="2" y="2" width="996" height="102" rx="20" fill="none" stroke="#C084FC" stroke-opacity="0.6" stroke-width="1.6"/>
 </svg>

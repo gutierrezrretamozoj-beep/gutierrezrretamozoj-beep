@@ -1,12 +1,15 @@
 <svg width="1000" height="320" viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <clipPath id="clip-amb"><rect x="2" y="2" width="996" height="316" rx="22"/></clipPath>
     <linearGradient id="bg-amber" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#241304"/>
       <stop offset="50%" stop-color="#4A2307"/>
       <stop offset="100%" stop-color="#1E1006"/>
     </linearGradient>
     <radialGradient id="glow-amber" cx="85%" cy="18%" r="55%">
-      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.38"/>
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.42">
+        <animate attributeName="stop-opacity" values="0.28;0.5;0.28" dur="3.6s" repeatCount="indefinite"/>
+      </stop>
       <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="orb-sphere-amb" cx="35%" cy="30%" r="70%">
@@ -14,6 +17,11 @@
       <stop offset="45%" stop-color="#F59E0B"/>
       <stop offset="100%" stop-color="#92400E"/>
     </radialGradient>
+    <linearGradient id="xp-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
     <pattern id="grid-amb" width="32" height="32" patternUnits="userSpaceOnUse">
       <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#FDE68A" stroke-opacity="0.06" stroke-width="1"/>
     </pattern>
@@ -22,115 +30,186 @@
       <stop offset="0%" stop-color="#F59E0B"/>
       <stop offset="100%" stop-color="#FDE68A"/>
     </linearGradient>
+    <clipPath id="bar-clip-0">
+      <rect x="257" y="11" width="456" height="14" rx="7"/>
+    </clipPath>
     <linearGradient id="bar-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#EC4899"/>
       <stop offset="100%" stop-color="#F9A8D4"/>
     </linearGradient>
+    <clipPath id="bar-clip-1">
+      <rect x="257" y="11" width="436" height="14" rx="7"/>
+    </clipPath>
     <linearGradient id="bar-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#10B981"/>
       <stop offset="100%" stop-color="#6EE7B7"/>
     </linearGradient>
+    <clipPath id="bar-clip-2">
+      <rect x="257" y="11" width="426" height="14" rx="7"/>
+    </clipPath>
     <linearGradient id="bar-grad-3" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38BDF8"/>
       <stop offset="100%" stop-color="#7DD3FC"/>
     </linearGradient>
+    <clipPath id="bar-clip-3">
+      <rect x="257" y="11" width="421" height="14" rx="7"/>
+    </clipPath>
   </defs>
 
-  <rect x="2" y="2" width="996" height="316" rx="22" fill="url(#bg-amber)" stroke="#FBBF24" stroke-opacity="0.58" stroke-width="1.8"/>
-  <rect x="2" y="2" width="996" height="316" rx="22" fill="url(#grid-amb)"/>
-  <rect x="2" y="2" width="996" height="316" rx="22" fill="url(#glow-amber)"/>
+  <g clip-path="url(#clip-amb)">
+    <rect x="2" y="2" width="996" height="316" rx="22" fill="url(#bg-amber)"/>
+    <rect x="2" y="2" width="996" height="316" rx="22" fill="url(#grid-amb)"/>
+    <rect x="2" y="2" width="996" height="316" rx="22" fill="url(#glow-amber)"/>
 
-  <!-- Orbe Ámbar Animado -->
-  <g transform="translate(62, 62)">
-    <circle cx="0" cy="0" r="34" fill="#F59E0B" fill-opacity="0.2">
-      <animate attributeName="r" values="30;37;30" dur="3.3s" repeatCount="indefinite"/>
-      <animate attributeName="fill-opacity" values="0.14;0.3;0.14" dur="3.3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="0" r="22" fill="url(#orb-sphere-amb)" stroke="#FEF3C7" stroke-width="1.5"/>
-    <ellipse cx="-6" cy="-7" rx="6" ry="3.5" fill="#FFFFFF" fill-opacity="0.6" transform="rotate(-25 -6 -7)"/>
-  </g>
+    <!-- Chispas doradas elevándose desde la forja -->
+    <circle cx="140" cy="300" r="2.5" fill="#FDE68A"><animate attributeName="cy" values="310;180" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0" dur="4.2s" repeatCount="indefinite"/></circle>
+    <circle cx="460" cy="305" r="2.2" fill="#F59E0B"><animate attributeName="cy" values="312;190" dur="5.1s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.85;0" dur="5.1s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="305" r="3" fill="#FEF3C7"><animate attributeName="cy" values="312;165" dur="4.6s" begin="0.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.95;0" dur="4.6s" begin="0.5s" repeatCount="indefinite"/></circle>
+    <circle cx="920" cy="305" r="2.4" fill="#FBBF24"><animate attributeName="cy" values="310;175" dur="3.9s" begin="2.0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.9;0" dur="3.9s" begin="2.0s" repeatCount="indefinite"/></circle>
 
-  <rect x="112" y="30" width="146" height="24" rx="12" fill="#F59E0B" fill-opacity="0.24" stroke="#FDE68A" stroke-opacity="0.65" stroke-width="1"/>
-  <text x="185" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#FEF3C7">ORBE 04  •  ÁMBAR</text>
+    <!-- Orbe Ámbar con Halo Solar Giratorio -->
+    <g transform="translate(62, 62)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/>
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#FDE68A" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="4 7"/>
+        <polygon points="0,-39 4,-31 -4,-31" fill="#FDE68A"/>
+        <polygon points="0,39 4,31 -4,31" fill="#FDE68A"/>
+        <polygon points="-39,0 -31,4 -31,-4" fill="#FDE68A"/>
+        <polygon points="39,0 31,4 31,-4" fill="#FDE68A"/>
+      </g>
+      <circle cx="0" cy="0" r="21" fill="url(#orb-sphere-amb)" stroke="#FEF3C7" stroke-width="1.5"/>
+      <ellipse cx="-6" cy="-7" rx="5.5" ry="3.2" fill="#FFFFFF" fill-opacity="0.6" transform="rotate(-25 -6 -7)"/>
+    </g>
 
-  <!-- Nivel RPG Derecha -->
-  <rect x="780" y="34" width="190" height="34" rx="17" fill="#1C0F04" fill-opacity="0.78" stroke="#FBBF24" stroke-width="1.4"/>
-  <text x="875" y="56" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="12.5" font-weight="800" fill="#FDE68A">LVL 92 • ARQUITECTO</text>
+    <rect x="112" y="30" width="146" height="24" rx="12" fill="#F59E0B" fill-opacity="0.26" stroke="#FDE68A" stroke-opacity="0.65" stroke-width="1"/>
+    <text x="185" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="800" letter-spacing="1.4" fill="#FEF3C7">ORBE 04  •  ÁMBAR</text>
 
-  <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Habilidades de Explorador (Nivel RPG)</text>
-  <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#FEF3C7" fill-opacity="0.88">Estadísticas de ingeniería forjadas construyendo productos completos de principio a fin</text>
+    <!-- Nivel RPG Derecha con Pulso -->
+    <rect x="780" y="34" width="190" height="34" rx="17" fill="#1C0F04" fill-opacity="0.82" stroke="#FBBF24" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.55;1;0.55" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="875" y="56" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="12.5" font-weight="800" fill="#FDE68A">LVL 92 • ARQUITECTO</text>
 
-  
+    <text x="112" y="80" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="25" font-weight="900" fill="#FFFFFF">Habilidades de Explorador (Nivel RPG)</text>
+    <text x="112" y="102" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#FEF3C7" fill-opacity="0.88">Estadísticas de ingeniería forjadas construyendo productos completos de principio a fin</text>
+
+    
   <g transform="translate(28, 128)">
     <text x="0" y="17" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFBEB">Arquitectura Full-Stack</text>
-    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.78">Database-First &amp; APIs</text>
+    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.8">Database-First &amp; APIs</text>
 
     <!-- Track -->
-    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.88" stroke="#F59E0B" stroke-opacity="0.35" stroke-width="1"/>
-    <!-- Fill animado -->
-    <rect x="257" y="11" width="456" height="14" rx="7" fill="url(#bar-grad-0)">
-      <animate attributeName="width" from="0" to="456" dur="1s" fill="freeze"/>
-    </rect>
+    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.9" stroke="#F59E0B" stroke-opacity="0.38" stroke-width="1"/>
+
+    <!-- Fill recortado con energía deslizante continua -->
+    <g clip-path="url(#bar-clip-0)">
+      <rect x="257" y="11" width="456" height="14" rx="7" fill="url(#bar-grad-0)">
+        <animate attributeName="width" from="0" to="456" dur="1s" fill="freeze"/>
+      </rect>
+      <rect x="190" y="9" width="85" height="18" fill="url(#xp-sheen)" transform="skewX(-25)">
+        <animate attributeName="x" values="220;800" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Chispa luminosa en la punta de cada barra XP -->
+    <circle cx="711" cy="18" r="4" fill="#FFFFFF">
+      <animate attributeName="r" values="2.5;5;2.5" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+    </circle>
 
     <!-- Badge Porcentaje -->
-    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#F59E0B" stroke-opacity="0.8" stroke-width="1.2"/>
+    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#F59E0B" stroke-opacity="0.85" stroke-width="1.2"/>
     <text x="812" y="23" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="13" font-weight="800" fill="#FEF3C7">92%</text>
 
-    <!-- Rango RPG -->
     <text x="866" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.8" fill="#FDE68A">MAESTRÍA</text>
   </g>
   <g transform="translate(28, 172)">
     <text x="0" y="17" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFBEB">Mundos 3D &amp; UI Interactiva</text>
-    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.78">Three.js, React 19, Shaders</text>
+    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.8">Three.js, React 19, Shaders</text>
 
     <!-- Track -->
-    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.88" stroke="#F59E0B" stroke-opacity="0.35" stroke-width="1"/>
-    <!-- Fill animado -->
-    <rect x="257" y="11" width="436" height="14" rx="7" fill="url(#bar-grad-1)">
-      <animate attributeName="width" from="0" to="436" dur="1.2s" fill="freeze"/>
-    </rect>
+    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.9" stroke="#F59E0B" stroke-opacity="0.38" stroke-width="1"/>
+
+    <!-- Fill recortado con energía deslizante continua -->
+    <g clip-path="url(#bar-clip-1)">
+      <rect x="257" y="11" width="436" height="14" rx="7" fill="url(#bar-grad-1)">
+        <animate attributeName="width" from="0" to="436" dur="1.18s" fill="freeze"/>
+      </rect>
+      <rect x="190" y="9" width="85" height="18" fill="url(#xp-sheen)" transform="skewX(-25)">
+        <animate attributeName="x" values="220;800" dur="2.6999999999999997s" begin="0.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Chispa luminosa en la punta de cada barra XP -->
+    <circle cx="691" cy="18" r="4" fill="#FFFFFF">
+      <animate attributeName="r" values="2.5;5;2.5" dur="1.8s" begin="0.35s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" begin="0.35s" repeatCount="indefinite"/>
+    </circle>
 
     <!-- Badge Porcentaje -->
-    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#EC4899" stroke-opacity="0.8" stroke-width="1.2"/>
+    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#EC4899" stroke-opacity="0.85" stroke-width="1.2"/>
     <text x="812" y="23" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="13" font-weight="800" fill="#FEF3C7">88%</text>
 
-    <!-- Rango RPG -->
     <text x="866" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.8" fill="#F9A8D4">MAESTRÍA</text>
   </g>
   <g transform="translate(28, 216)">
     <text x="0" y="17" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFBEB">Cloud &amp; Despliegue</text>
-    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.78">Vercel, Docker, GitHub CI</text>
+    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.8">Vercel, Docker, GitHub CI</text>
 
     <!-- Track -->
-    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.88" stroke="#F59E0B" stroke-opacity="0.35" stroke-width="1"/>
-    <!-- Fill animado -->
-    <rect x="257" y="11" width="426" height="14" rx="7" fill="url(#bar-grad-2)">
-      <animate attributeName="width" from="0" to="426" dur="1.4s" fill="freeze"/>
-    </rect>
+    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.9" stroke="#F59E0B" stroke-opacity="0.38" stroke-width="1"/>
+
+    <!-- Fill recortado con energía deslizante continua -->
+    <g clip-path="url(#bar-clip-2)">
+      <rect x="257" y="11" width="426" height="14" rx="7" fill="url(#bar-grad-2)">
+        <animate attributeName="width" from="0" to="426" dur="1.3599999999999999s" fill="freeze"/>
+      </rect>
+      <rect x="190" y="9" width="85" height="18" fill="url(#xp-sheen)" transform="skewX(-25)">
+        <animate attributeName="x" values="220;800" dur="3s" begin="0.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Chispa luminosa en la punta de cada barra XP -->
+    <circle cx="681" cy="18" r="4" fill="#FFFFFF">
+      <animate attributeName="r" values="2.5;5;2.5" dur="1.8s" begin="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" begin="0.7s" repeatCount="indefinite"/>
+    </circle>
 
     <!-- Badge Porcentaje -->
-    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#10B981" stroke-opacity="0.8" stroke-width="1.2"/>
+    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#10B981" stroke-opacity="0.85" stroke-width="1.2"/>
     <text x="812" y="23" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="13" font-weight="800" fill="#FEF3C7">86%</text>
 
-    <!-- Rango RPG -->
     <text x="866" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.8" fill="#6EE7B7">MAESTRÍA</text>
   </g>
   <g transform="translate(28, 260)">
     <text x="0" y="17" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFBEB">Seguridad &amp; Multi-Tenant</text>
-    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.78">JWT, Zero Trust, Redis</text>
+    <text x="0" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#FDE68A" fill-opacity="0.8">JWT, Zero Trust, Redis</text>
 
     <!-- Track -->
-    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.88" stroke="#F59E0B" stroke-opacity="0.35" stroke-width="1"/>
-    <!-- Fill animado -->
-    <rect x="257" y="11" width="421" height="14" rx="7" fill="url(#bar-grad-3)">
-      <animate attributeName="width" from="0" to="421" dur="1.6s" fill="freeze"/>
-    </rect>
+    <rect x="255" y="9" width="500" height="18" rx="9" fill="#1C0F04" fill-opacity="0.9" stroke="#F59E0B" stroke-opacity="0.38" stroke-width="1"/>
+
+    <!-- Fill recortado con energía deslizante continua -->
+    <g clip-path="url(#bar-clip-3)">
+      <rect x="257" y="11" width="421" height="14" rx="7" fill="url(#bar-grad-3)">
+        <animate attributeName="width" from="0" to="421" dur="1.54s" fill="freeze"/>
+      </rect>
+      <rect x="190" y="9" width="85" height="18" fill="url(#xp-sheen)" transform="skewX(-25)">
+        <animate attributeName="x" values="220;800" dur="3.3s" begin="1.2000000000000002s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Chispa luminosa en la punta de cada barra XP -->
+    <circle cx="676" cy="18" r="4" fill="#FFFFFF">
+      <animate attributeName="r" values="2.5;5;2.5" dur="1.8s" begin="1.0499999999999998s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" begin="1.0499999999999998s" repeatCount="indefinite"/>
+    </circle>
 
     <!-- Badge Porcentaje -->
-    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#38BDF8" stroke-opacity="0.8" stroke-width="1.2"/>
+    <rect x="774" y="5" width="76" height="26" rx="13" fill="#451A03" stroke="#38BDF8" stroke-opacity="0.85" stroke-width="1.2"/>
     <text x="812" y="23" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="13" font-weight="800" fill="#FEF3C7">85%</text>
 
-    <!-- Rango RPG -->
     <text x="866" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="0.8" fill="#7DD3FC">MAESTRÍA</text>
   </g>
+  </g>
+  <rect x="2" y="2" width="996" height="316" rx="22" fill="none" stroke="#FBBF24" stroke-opacity="0.62" stroke-width="1.8"/>
 </svg>

@@ -4,10 +4,26 @@
       <stop offset="0%" stop-color="#064E3B"/>
       <stop offset="100%" stop-color="#10B981"/>
     </linearGradient>
+    <linearGradient id="sh-world" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="cp-world">
+      <rect x="1.5" y="1.5" width="237" height="59" rx="14"/>
+    </clipPath>
   </defs>
-  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-world)" stroke="#6EE7B7" stroke-width="1.6"/>
-  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.14"/>
+  <g clip-path="url(#cp-world)">
+    <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="url(#bg-world)"/>
+    <rect x="-90" y="-10" width="75" height="82" fill="url(#sh-world)" transform="skewX(-22)">
+      <animate attributeName="x" values="-90;310;310" keyTimes="0;0.32;1" dur="4.2s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect x="1.5" y="1.5" width="237" height="59" rx="14" fill="none" stroke="#6EE7B7" stroke-width="1.6">
+    <animate attributeName="stroke-opacity" values="0.65;1;0.65" dur="3s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="12" y="13" width="36" height="36" rx="10" fill="#FFFFFF" fill-opacity="0.16"/>
   <g transform="translate(18, 19)"><polygon points="12,1 22,6.5 22,17.5 12,23 2,17.5 2,6.5" fill="none" stroke="#ECFDF5" stroke-width="2"/><polyline points="2,6.5 12,12 22,6.5" fill="none" stroke="#ECFDF5" stroke-width="2"/><line x1="12" y1="12" x2="12" y2="23" stroke="#ECFDF5" stroke-width="2"/></g>
   <text x="59" y="29" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" letter-spacing="0.5" fill="#FFFFFF">MUNDO 3D EN VIVO</text>
-  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.82">Explorar en PC · WebGL</text>
+  <text x="59" y="46" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#FFFFFF" fill-opacity="0.86">Explorar en PC · WebGL</text>
 </svg>

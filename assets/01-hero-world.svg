@@ -3,41 +3,59 @@
     <clipPath id="hero-clip">
       <rect x="3" y="3" width="994" height="524" rx="24" ry="24"/>
     </clipPath>
+    <clipPath id="cta-clip">
+      <rect x="215" y="446" width="570" height="50" rx="25"/>
+    </clipPath>
 
-    <!-- Viñeta cinematográfica: preserva la claridad del valle 3D en el centro -->
     <linearGradient id="cinema-vignette" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#120B24" stop-opacity="0.72"/>
-      <stop offset="22%" stop-color="#120B24" stop-opacity="0.16"/>
-      <stop offset="56%" stop-color="#0F172A" stop-opacity="0.12"/>
+      <stop offset="22%" stop-color="#120B24" stop-opacity="0.14"/>
+      <stop offset="56%" stop-color="#0F172A" stop-opacity="0.10"/>
       <stop offset="78%" stop-color="#0D1025" stop-opacity="0.76"/>
       <stop offset="100%" stop-color="#0A0B1A" stop-opacity="0.94"/>
     </linearGradient>
 
-    <!-- Resplandor radial suave en bordes -->
     <radialGradient id="edge-vignette" cx="50%" cy="44%" r="65%">
       <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
       <stop offset="100%" stop-color="#090714" stop-opacity="0.58"/>
     </radialGradient>
 
-    <!-- Gradiente arcoíris atardecer para el título y marco -->
     <linearGradient id="sunset-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FDE68A"/>
-      <stop offset="32%" stop-color="#F9A8D4"/>
-      <stop offset="68%" stop-color="#6EE7B7"/>
-      <stop offset="100%" stop-color="#7DD3FC"/>
+      <stop offset="0%" stop-color="#FDE68A">
+        <animate attributeName="stop-color" values="#FDE68A;#F9A8D4;#6EE7B7;#FDE68A" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="35%" stop-color="#F9A8D4">
+        <animate attributeName="stop-color" values="#F9A8D4;#6EE7B7;#7DD3FC;#F9A8D4" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="70%" stop-color="#6EE7B7">
+        <animate attributeName="stop-color" values="#6EE7B7;#7DD3FC;#FDE68A;#6EE7B7" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#7DD3FC">
+        <animate attributeName="stop-color" values="#7DD3FC;#FDE68A;#F9A8D4;#7DD3FC" dur="8s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
 
-    <!-- Gradiente botón CTA -->
     <linearGradient id="cta-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#065F46" stop-opacity="0.92"/>
-      <stop offset="50%" stop-color="#4C1D95" stop-opacity="0.92"/>
-      <stop offset="100%" stop-color="#9D174D" stop-opacity="0.92"/>
+      <stop offset="0%" stop-color="#065F46" stop-opacity="0.94"/>
+      <stop offset="50%" stop-color="#4C1D95" stop-opacity="0.94"/>
+      <stop offset="100%" stop-color="#9D174D" stop-opacity="0.94"/>
+    </linearGradient>
+
+    <linearGradient id="sheen-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="comet-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFFBEB" stop-opacity="0.95"/>
     </linearGradient>
 
     <filter id="text-shadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#05040D" flood-opacity="0.92"/>
     </filter>
-    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
+    <filter id="soft-glow" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
@@ -46,7 +64,6 @@
     </filter>
   </defs>
 
-  <!-- Fondo base oscuro por si tarda 1 frame en decodificar -->
   <rect x="3" y="3" width="994" height="524" rx="24" fill="#130E24"/>
 
   <g clip-path="url(#hero-clip)">
@@ -57,64 +74,100 @@
     <rect x="0" y="0" width="1000" height="530" fill="url(#cinema-vignette)"/>
     <rect x="0" y="0" width="1000" height="530" fill="url(#edge-vignette)"/>
 
+    <!-- ESTRELLA FUGAZ CRUZANDO EL CIELO DEL VALLE -->
+    <g opacity="0">
+      <line x1="0" y1="0" x2="95" y2="28" stroke="url(#comet-grad)" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="95" cy="28" r="3.2" fill="#FFFBEB" filter="url(#soft-glow)"/>
+      <animateTransform attributeName="transform" type="translate" values="80,68; 760,195; 760,195" keyTimes="0;0.24;1" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.95;0;0" keyTimes="0;0.1;0.24;1" dur="6.5s" repeatCount="indefinite"/>
+    </g>
+
     <!-- LUCIÉRNAGAS MÁGICAS ANIMADAS FLOTANDO SOBRE EL VALLE -->
     <g filter="url(#soft-glow)">
-      <circle cx="115" cy="270" r="3.5" fill="#FDE68A">
-        <animate attributeName="cy" values="285;225;285" dur="4.6s" repeatCount="indefinite"/>
-        <animate attributeName="cx" values="115;132;115" dur="4.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.2;1;0.2" dur="4.6s" repeatCount="indefinite"/>
+      <circle cx="95" cy="270" r="3.6" fill="#FDE68A">
+        <animate attributeName="cy" values="295;215;295" dur="4.6s" repeatCount="indefinite"/>
+        <animate attributeName="cx" values="95;125;95" dur="4.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.15;1;0.15" dur="4.6s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="240" cy="340" r="2.8" fill="#6EE7B7">
-        <animate attributeName="cy" values="350;295;350" dur="5.2s" repeatCount="indefinite"/>
+      <circle cx="220" cy="340" r="3" fill="#6EE7B7">
+        <animate attributeName="cy" values="355;275;355" dur="5.2s" repeatCount="indefinite"/>
+        <animate attributeName="cx" values="220;195;220" dur="5.2s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0.15;0.95;0.15" dur="5.2s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="785" cy="255" r="4" fill="#F9A8D4">
-        <animate attributeName="cy" values="265;205;265" dur="4.1s" repeatCount="indefinite"/>
-        <animate attributeName="cx" values="785;768;785" dur="4.1s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.25;1;0.25" dur="4.1s" repeatCount="indefinite"/>
+      <circle cx="345" cy="240" r="2.6" fill="#F9A8D4">
+        <animate attributeName="cy" values="250;180;250" dur="4.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.1;0.9;0.1" dur="4.3s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="890" cy="335" r="3.2" fill="#7DD3FC">
-        <animate attributeName="cy" values="345;285;345" dur="5.8s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.2;0.9;0.2" dur="5.8s" repeatCount="indefinite"/>
+      <circle cx="515" cy="145" r="2.8" fill="#FDE68A">
+        <animate attributeName="cy" values="165;110;165" dur="3.9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.15;0.95;0.15" dur="3.9s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="510" cy="145" r="2.5" fill="#FDE68A">
-        <animate attributeName="cy" values="155;120;155" dur="3.9s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.1;0.85;0.1" dur="3.9s" repeatCount="indefinite"/>
+      <circle cx="660" cy="295" r="3.2" fill="#A78BFA">
+        <animate attributeName="cy" values="310;235;310" dur="5.0s" repeatCount="indefinite"/>
+        <animate attributeName="cx" values="660;685;660" dur="5.0s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="5.0s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="790" cy="255" r="4" fill="#F9A8D4">
+        <animate attributeName="cy" values="275;195;275" dur="4.1s" repeatCount="indefinite"/>
+        <animate attributeName="cx" values="790;760;790" dur="4.1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="4.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="895" cy="330" r="3.4" fill="#7DD3FC">
+        <animate attributeName="cy" values="350;270;350" dur="5.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.95;0.2" dur="5.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="155" cy="150" r="2.4" fill="#6EE7B7">
+        <animate attributeName="cy" values="170;115;170" dur="4.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.15;0.85;0.15" dur="4.8s" repeatCount="indefinite"/>
       </circle>
     </g>
 
-    <!-- HUD SUPERIOR IZQUIERDO: ONLINE -->
-    <rect x="26" y="22" width="268" height="36" rx="18" fill="#0B1120" fill-opacity="0.78" stroke="#34D399" stroke-opacity="0.7" stroke-width="1.3"/>
-    <circle cx="48" cy="40" r="6" fill="#34D399" filter="url(#soft-glow)">
-      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/>
+    <!-- HUD SUPERIOR IZQUIERDO: ONLINE CON ONDA RADAR -->
+    <rect x="26" y="22" width="268" height="36" rx="18" fill="#0B1120" fill-opacity="0.78" stroke="#34D399" stroke-opacity="0.75" stroke-width="1.3"/>
+    <circle cx="48" cy="40" r="6" fill="none" stroke="#34D399" stroke-width="1.5">
+      <animate attributeName="r" values="5;13" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0" dur="1.8s" repeatCount="indefinite"/>
     </circle>
+    <circle cx="48" cy="40" r="5.5" fill="#34D399" filter="url(#soft-glow)"/>
     <text x="64" y="45" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.8" fill="#ECFDF5">ONLINE  •  BARRANQUILLA, CO</text>
 
-    <!-- HUD SUPERIOR CENTRO: MODO EN VIVO -->
-    <rect x="394" y="22" width="212" height="36" rx="18" fill="#0B1120" fill-opacity="0.72" stroke="#A78BFA" stroke-opacity="0.65" stroke-width="1.3"/>
-    <circle cx="416" cy="40" r="4.5" fill="#F472B6"/>
-    <circle cx="428" cy="40" r="4.5" fill="#34D399"/>
-    <circle cx="440" cy="40" r="4.5" fill="#FBBF24"/>
+    <!-- HUD SUPERIOR CENTRO: MODO EN VIVO CON LUCES SECUENCIALES -->
+    <rect x="394" y="22" width="212" height="36" rx="18" fill="#0B1120" fill-opacity="0.74" stroke="#A78BFA" stroke-opacity="0.7" stroke-width="1.3"/>
+    <circle cx="416" cy="40" r="4.5" fill="#F472B6">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="428" cy="40" r="4.5" fill="#34D399">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="440" cy="40" r="4.5" fill="#FBBF24">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="1s" repeatCount="indefinite"/>
+    </circle>
     <text x="456" y="45" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.9" fill="#F5F3FF">3D LIVE SANDBOX</text>
 
     <!-- HUD SUPERIOR DERECHO: CLIMA Y ORBES -->
-    <rect x="684" y="22" width="290" height="36" rx="18" fill="#0B1120" fill-opacity="0.78" stroke="#FBBF24" stroke-opacity="0.7" stroke-width="1.3"/>
-    <circle cx="708" cy="40" r="6.5" fill="#FBBF24" filter="url(#soft-glow)"/>
+    <rect x="684" y="22" width="290" height="36" rx="18" fill="#0B1120" fill-opacity="0.78" stroke="#FBBF24" stroke-opacity="0.75" stroke-width="1.3"/>
+    <circle cx="708" cy="40" r="6" fill="#FBBF24" filter="url(#soft-glow)">
+      <animate attributeName="r" values="5;7.5;5" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
     <text x="724" y="45" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="0.8" fill="#FEF3C7">ATARDECER  •  5 ORBES ACTIVOS</text>
 
-    <!-- ZONA INFERIOR CINEMATOGRÁFICA: TÍTULO + SUBTÍTULO + CTA -->
+    <!-- ZONA INFERIOR CINEMATOGRÁFICA: TÍTULO + SUBTÍTULO + CTA CON BRILLO -->
     <text x="500" y="388" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="4" fill="url(#sunset-grad)" filter="url(#text-shadow)">DAVID'S WORLD</text>
     <text x="500" y="422" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="17.5" font-weight="600" letter-spacing="0.4" fill="#F8FAFC" filter="url(#text-shadow)">José David Gutiérrez Retamozo  •  Arquitecto de Mundos 3D &amp; Full-Stack</text>
 
-    <!-- BOTÓN CTA PRINCIPAL SUPERPUESTO -->
-    <rect x="215" y="446" width="570" height="50" rx="25" fill="url(#cta-grad)" stroke="url(#sunset-grad)" stroke-width="1.8">
-      <animate attributeName="stroke-opacity" values="0.65;1;0.65" dur="2.8s" repeatCount="indefinite"/>
-    </rect>
-    <!-- Icono Play Vectorial -->
-    <polygon points="248,463 248,479 262,471" fill="#FDE68A"/>
+    <!-- BOTÓN CTA PRINCIPAL SUPERPUESTO CON DESTELLO DESLIZANTE -->
+    <rect x="215" y="446" width="570" height="50" rx="25" fill="url(#cta-grad)" stroke="url(#sunset-grad)" stroke-width="2"/>
+    <g clip-path="url(#cta-clip)">
+      <rect x="115" y="440" width="110" height="64" fill="url(#sheen-grad)" transform="skewX(-22)">
+        <animate attributeName="x" values="120;960;960" keyTimes="0;0.38;1" dur="3.8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <polygon points="248,463 248,479 262,471" fill="#FDE68A">
+      <animateTransform attributeName="transform" type="translate" values="0,0;4,0;0,0" dur="1.6s" repeatCount="indefinite"/>
+    </polygon>
     <text x="514" y="476" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="800" letter-spacing="1.1" fill="#FFFFFF">ENTRAR AL MUNDO 3D EN VIVO  →  davis-world.is-a.dev</text>
   </g>
 
-  <!-- MARCO EXTERIOR IRIDISCENTE -->
-  <rect x="3" y="3" width="994" height="524" rx="24" ry="24" fill="none" stroke="url(#sunset-grad)" stroke-width="2.5"/>
+  <!-- MARCO EXTERIOR IRIDISCENTE ANIMADO -->
+  <rect x="3" y="3" width="994" height="524" rx="24" ry="24" fill="none" stroke="url(#sunset-grad)" stroke-width="2.6"/>
 </svg>
