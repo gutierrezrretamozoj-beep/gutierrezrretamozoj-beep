@@ -66,3 +66,75 @@
   <img src="https://img.shields.io/badge/React_19-EC4899?style=for-the-badge&logo=react&logoColor=white" />
   <img src="https://img.shields.io/badge/TypeScript-3B82F6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Three.js_3D-DB2777?style=for-the-badge&logo=threedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Next.js-8B5CF6?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite_7-F59E0B?style=for-the-badge&logo=vite&logoColor=1E293B" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Experiencia-Dual_PC_3D_+_Móvil_Builder-BE185D?style=flat-square" />
+  <img src="https://img.shields.io/badge/Animación-Shaders_&_Partículas-F43F5E?style=flat-square" />
+</div>
+</details>
+
+<details>
+<summary>🟣 <b>ORBE AMATISTA — Misiones & Construcciones del Mundo</b></summary>
+<br/>
+
+| Portal | Creación | Poderes Equipados | Enlace |
+| :---: | :--- | :--- | :---: |
+| 🌅 | **David's World 3D** | `React 19` `Three.js` `TypeScript` `Vite` | [Jugar ↗](https://davis-world.is-a.dev/) |
+| 🦊 | **Wildlife Sanctuary SaaS** | `Next.js` `TypeORM` `PostgreSQL` `Redis` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
+| 🏛️ | **Cospace Booking** | `Next.js` `Prisma` `Supabase` `Tailwind` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
+| 🏟️ | **Vice City Complex** | `PostgreSQL` `NestJS` `Swagger` `JWT` | [Ver Código ↗](https://github.com/gutierrezrretamozoj-beep) |
+
+</details>
+
+<details>
+<summary>🟡 <b>ORBE ÁMBAR — Habilidades de Explorador (Nivel RPG)</b></summary>
+<br/>
+
+```text
+⚔️  Arquitectura Full-Stack   ██████████████████░░  92%  [Database-First & APIs]
+🎨  Mundos 3D & UI Interactiva █████████████████░░░  88%  [Three.js, React 19, Shaders]
+🛡️  Seguridad & Multi-Tenant   ████████████████░░░░  85%  [JWT, Zero Trust, Redis]
+🚀  Cloud & Despliegue         █████████████████░░░  86%  [Vercel, Docker, GitHub CI]
+```
+
+</details>
+
+<details>
+<summary>🔵 <b>ORBE CIAN — Cabaña del Viajero & Contacto</b></summary>
+<br/>
+<div align="center">
+  <img src="https://img.shields.io/badge/Ubicación-Barranquilla,_Colombia-0284C7?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Rol-Full--Stack_Software_Engineer-0EA5E9?style=for-the-badge" />
+  <a href="mailto:gutierrezrretamozoj@gmail.com">
+    <img src="https://img.shields.io/badge/Email-gutierrezrretamozoj@gmail.com-F59E0B?style=for-the-badge&logo=gmail&logoColor=1E293B" />
+  </a>
+</div>
+</details>
+
+---
+
+### 🏆 Trofeos, Radar de Actividad & Energía del Valle
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=gutierrezrretamozoj-beep&theme=radical&no-frame=true&no-bg=true&row=1&column=6&margin-w=12" alt="Trofeos" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img height="175" src="https://github-readme-stats.vercel.app/api?username=gutierrezrretamozoj-beep&show_icons=true&theme=synthwave&hide_border=true&title_color=FDE68A&icon_color=34D399&text_color=F8FAFC" alt="Stats" />
+  <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=gutierrezrretamozoj-beep&layout=compact&theme=synthwave&hide_border=true&title_color=F9A8D4&text_color=F8FAFC" alt="Languages" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=gutierrezrretamozoj-beep&bg_color=1E1B2E&color=FDE68A&line=EC4899&point=34D399&area=true&area_color=8B5CF6&hide_border=true&custom_title=⚡%20Pulso%20de%20Creación%20en%20David's%20World" alt="Activity Graph" />
+</div>
+
+<!-- OLA MULTICOLOR DE CIERRE -->
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:10B981,25:06B6D4,50:8B5CF6,75:EC4899,100:F59E0B&height=120&section=footer&text=🦊%20Explora%20el%20mundo%20en%20davis-world.is-a.dev%20🦉&fontSize=17&fontColor=FFFFFF&fontAlignY=65" alt="Footer" />
+</div>
