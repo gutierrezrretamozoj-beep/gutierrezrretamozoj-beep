@@ -1,10 +1,10 @@
-<svg width="1000" height="106" viewBox="0 0 1000 106" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="336" viewBox="0 0 1000 336" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <clipPath id="clip-rad"><rect x="2" y="2" width="996" height="102" rx="20"/></clipPath>
-    <linearGradient id="bg-radar" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1A103D"/>
-      <stop offset="50%" stop-color="#311457"/>
-      <stop offset="100%" stop-color="#132042"/>
+    <clipPath id="clip-rad"><rect x="2" y="2" width="996" height="332" rx="22"/></clipPath>
+    <linearGradient id="bg-radar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#170D36"/>
+      <stop offset="50%" stop-color="#2D1352"/>
+      <stop offset="100%" stop-color="#101E3F"/>
     </linearGradient>
     <linearGradient id="pulse-line" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#34D399"/>
@@ -13,19 +13,62 @@
     </linearGradient>
     <linearGradient id="scan-bar" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#C084FC" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#C084FC" stop-opacity="0.18"/>
+      <stop offset="50%" stop-color="#C084FC" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ring-outer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="ring-inner" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <linearGradient id="area-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#8B5CF6" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid-rad" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#C4B5FD" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    
+    <linearGradient id="vbar-grad-0" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#93C5FD"/>
+    </linearGradient>
+    <linearGradient id="vbar-grad-1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#F9A8D4"/>
+    </linearGradient>
+    <linearGradient id="vbar-grad-2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="vbar-grad-3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#6EE7B7"/>
+    </linearGradient>
+    <linearGradient id="vbar-grad-4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#67E8F9"/>
+    </linearGradient>
+    <linearGradient id="vbar-grad-5" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#C4B5FD"/>
     </linearGradient>
   </defs>
 
   <g clip-path="url(#clip-rad)">
-    <rect x="2" y="2" width="996" height="102" rx="20" fill="url(#bg-radar)"/>
+    <rect x="2" y="2" width="996" height="332" rx="22" fill="url(#bg-radar)"/>
+    <rect x="2" y="2" width="996" height="332" rx="22" fill="url(#grid-rad)"/>
+
     <!-- Haz escáner horizontal -->
-    <rect x="-180" y="0" width="180" height="106" fill="url(#scan-bar)">
-      <animate attributeName="x" values="-180;1060" dur="4.5s" repeatCount="indefinite"/>
+    <rect x="-180" y="0" width="180" height="336" fill="url(#scan-bar)">
+      <animate attributeName="x" values="-180;1060" dur="5.2s" repeatCount="indefinite"/>
     </rect>
 
-    <!-- Línea base ECG tenue + pulso vivo recorriéndola -->
+    <!-- CABECERA TELEMETRÍA -->
     <polyline points="28,54 68,54 82,26 96,80 110,40 124,54 166,54" fill="none" stroke="#C084FC" stroke-opacity="0.22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <polyline points="28,54 68,54 82,26 96,80 110,40 124,54 166,54" fill="none" stroke="url(#pulse-line)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="190" stroke-dashoffset="190">
       <animate attributeName="stroke-dashoffset" values="190;0;-190" dur="2.6s" repeatCount="indefinite"/>
@@ -34,8 +77,8 @@
       <animate attributeName="r" values="3.5;6.5;3.5" dur="1.3s" repeatCount="indefinite"/>
     </circle>
 
-    <text x="192" y="47" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">Radar de Actividad &amp; Energía del Valle</text>
-    <text x="192" y="72" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#E9D5FF" fill-opacity="0.88">Estadísticas en vivo de GitHub, lenguajes dominantes y pulso de commits en tiempo real</text>
+    <text x="192" y="47" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="900" fill="#FFFFFF">Radar de Actividad &amp; Diagramas en Vivo</text>
+    <text x="192" y="72" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#E9D5FF" fill-opacity="0.88">Métricas dinámicas que se cargan en tiempo real, dominio del stack y pulso de creación</text>
 
     <!-- Badge LIVE METRICS con mini radar giratorio -->
     <rect x="808" y="32" width="164" height="40" rx="20" fill="#0F172A" fill-opacity="0.78" stroke="#34D399" stroke-opacity="0.75" stroke-width="1.3"/>
@@ -47,6 +90,181 @@
       <circle cx="0" cy="0" r="2.2" fill="#A7F3D0"/>
     </g>
     <text x="852" y="57" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="12" font-weight="800" fill="#A7F3D0">LIVE METRICS</text>
+
+    <line x1="28" y1="100" x2="972" y2="100" stroke="#C084FC" stroke-opacity="0.22" stroke-width="1"/>
+
+    <!-- ================================================================ -->
+    <!-- DIAGRAMA 1 (IZQUIERDA): ANILLO DONUT DUAL QUE SE LLENA DESDE 0%  -->
+    <!-- ================================================================ -->
+    <g transform="translate(28, 114)">
+      <rect x="0" y="0" width="296" height="198" rx="16" fill="#0F0924" fill-opacity="0.84" stroke="#A78BFA" stroke-opacity="0.38" stroke-width="1.2"/>
+      <text x="18" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="1.1" fill="#A7F3D0">DOMINIO FULL-STACK</text>
+
+      <!-- Anillos base vacíos -->
+      <circle cx="148" cy="102" r="54" fill="none" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="10"/>
+      <circle cx="148" cy="102" r="39" fill="none" stroke="#FFFFFF" stroke-opacity="0.09" stroke-width="8"/>
+
+      <!-- Anillo exterior (92%) llenándose desde 0 -->
+      <circle cx="148" cy="102" r="54" fill="none" stroke="url(#ring-outer)" stroke-width="10" stroke-linecap="round" stroke-dasharray="340" stroke-dashoffset="340" transform="rotate(-90 148 102)">
+        <animate attributeName="stroke-dashoffset" values="340;340;27;27;340;340" keyTimes="0;0.04;0.26;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Anillo interior (88%) llenándose desde 0 -->
+      <circle cx="148" cy="102" r="39" fill="none" stroke="url(#ring-inner)" stroke-width="8" stroke-linecap="round" stroke-dasharray="245" stroke-dashoffset="245" transform="rotate(-90 148 102)">
+        <animate attributeName="stroke-dashoffset" values="245;245;29;29;245;245" keyTimes="0;0.08;0.30;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Lectura central -->
+      <text x="148" y="102" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="22" font-weight="900" fill="#FFFFFF">92%</text>
+      <text x="148" y="118" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="9.5" font-weight="800" letter-spacing="1.2" fill="#FDE68A">INDEX</text>
+
+      <!-- Leyenda -->
+      <circle cx="42" cy="179" r="4.5" fill="#34D399"/>
+      <text x="53" y="183" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#D1FAE5">Backend 92%</text>
+      <circle cx="166" cy="179" r="4.5" fill="#EC4899"/>
+      <text x="177" y="183" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#FCE7F3">3D &amp; UI 88%</text>
+    </g>
+
+    <!-- ================================================================ -->
+    <!-- DIAGRAMA 2 (CENTRO): 6 BARRAS VERTICALES SUBIENDO DESDE CERO     -->
+    <!-- ================================================================ -->
+    <g transform="translate(340, 114)">
+      <rect x="0" y="0" width="320" height="198" rx="16" fill="#0F0924" fill-opacity="0.84" stroke="#A78BFA" stroke-opacity="0.38" stroke-width="1.2"/>
+      <text x="18" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="1.1" fill="#F9A8D4">PODER POR TECNOLOGÍA</text>
+
+      <!-- Líneas guía horizontales -->
+      <line x1="20" y1="62" x2="300" y2="62" stroke="#FFFFFF" stroke-opacity="0.07" stroke-dasharray="3 4"/>
+      <line x1="20" y1="92" x2="300" y2="92" stroke="#FFFFFF" stroke-opacity="0.07" stroke-dasharray="3 4"/>
+      <line x1="20" y1="122" x2="300" y2="122" stroke="#FFFFFF" stroke-opacity="0.07" stroke-dasharray="3 4"/>
+      <line x1="20" y1="150" x2="300" y2="150" stroke="#C4B5FD" stroke-opacity="0.28" stroke-width="1"/>
+
+      
+      <!-- Track vacío vertical -->
+      <rect x="25" y="58" width="30" height="92" rx="6" fill="#FFFFFF" fill-opacity="0.06"/>
+      <!-- Columna que sube desde 0 -->
+      <rect x="25" y="150" width="30" height="0" rx="6" fill="url(#vbar-grad-0)">
+        <animate attributeName="y" values="150;150;63;63;150;150" keyTimes="0;0.040;0.220;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="height" values="0;0;87;87;0;0" keyTimes="0;0.040;0.220;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Etiqueta porcentaje que aparece al llenarse -->
+      <text x="40" y="57" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="9.5" font-weight="800" fill="#93C5FD" opacity="0">
+        95%
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.220;0.260;0.84;0.92;1" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="40" y="172" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#DDD6FE">TS</text>
+      <!-- Track vacío vertical -->
+      <rect x="73" y="58" width="30" height="92" rx="6" fill="#FFFFFF" fill-opacity="0.06"/>
+      <!-- Columna que sube desde 0 -->
+      <rect x="73" y="150" width="30" height="0" rx="6" fill="url(#vbar-grad-1)">
+        <animate attributeName="y" values="150;150;65;65;150;150" keyTimes="0;0.072;0.252;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="height" values="0;0;85;85;0;0" keyTimes="0;0.072;0.252;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Etiqueta porcentaje que aparece al llenarse -->
+      <text x="88" y="59" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="9.5" font-weight="800" fill="#F9A8D4" opacity="0">
+        92%
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.252;0.292;0.84;0.92;1" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="88" y="172" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#DDD6FE">React</text>
+      <!-- Track vacío vertical -->
+      <rect x="121" y="58" width="30" height="92" rx="6" fill="#FFFFFF" fill-opacity="0.06"/>
+      <!-- Columna que sube desde 0 -->
+      <rect x="121" y="150" width="30" height="0" rx="6" fill="url(#vbar-grad-2)">
+        <animate attributeName="y" values="150;150;69;69;150;150" keyTimes="0;0.104;0.284;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="height" values="0;0;81;81;0;0" keyTimes="0;0.104;0.284;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Etiqueta porcentaje que aparece al llenarse -->
+      <text x="136" y="63" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="9.5" font-weight="800" fill="#FDE68A" opacity="0">
+        88%
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.284;0.324;0.84;0.92;1" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="136" y="172" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#DDD6FE">3D</text>
+      <!-- Track vacío vertical -->
+      <rect x="169" y="58" width="30" height="92" rx="6" fill="#FFFFFF" fill-opacity="0.06"/>
+      <!-- Columna que sube desde 0 -->
+      <rect x="169" y="150" width="30" height="0" rx="6" fill="url(#vbar-grad-3)">
+        <animate attributeName="y" values="150;150;67;67;150;150" keyTimes="0;0.136;0.316;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="height" values="0;0;83;83;0;0" keyTimes="0;0.136;0.316;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Etiqueta porcentaje que aparece al llenarse -->
+      <text x="184" y="61" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="9.5" font-weight="800" fill="#6EE7B7" opacity="0">
+        90%
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.316;0.356;0.84;0.92;1" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="184" y="172" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#DDD6FE">Node</text>
+      <!-- Track vacío vertical -->
+      <rect x="217" y="58" width="30" height="92" rx="6" fill="#FFFFFF" fill-opacity="0.06"/>
+      <!-- Columna que sube desde 0 -->
+      <rect x="217" y="150" width="30" height="0" rx="6" fill="url(#vbar-grad-4)">
+        <animate attributeName="y" values="150;150;64;64;150;150" keyTimes="0;0.168;0.348;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="height" values="0;0;86;86;0;0" keyTimes="0;0.168;0.348;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Etiqueta porcentaje que aparece al llenarse -->
+      <text x="232" y="58" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="9.5" font-weight="800" fill="#67E8F9" opacity="0">
+        94%
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.348;0.388;0.84;0.92;1" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="232" y="172" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#DDD6FE">SQL</text>
+      <!-- Track vacío vertical -->
+      <rect x="265" y="58" width="30" height="92" rx="6" fill="#FFFFFF" fill-opacity="0.06"/>
+      <!-- Columna que sube desde 0 -->
+      <rect x="265" y="150" width="30" height="0" rx="6" fill="url(#vbar-grad-5)">
+        <animate attributeName="y" values="150;150;71;71;150;150" keyTimes="0;0.200;0.380;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="height" values="0;0;79;79;0;0" keyTimes="0;0.200;0.380;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Etiqueta porcentaje que aparece al llenarse -->
+      <text x="280" y="65" text-anchor="middle" font-family="'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace" font-size="9.5" font-weight="800" fill="#C4B5FD" opacity="0">
+        86%
+        <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.380;0.420;0.84;0.92;1" dur="10s" repeatCount="indefinite"/>
+      </text>
+      <text x="280" y="172" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#DDD6FE">Cloud</text>
+    </g>
+
+    <!-- ================================================================ -->
+    <!-- DIAGRAMA 3 (DERECHA): CURVA DE PULSO DIBUJÁNDOSE DE IZQ A DER    -->
+    <!-- ================================================================ -->
+    <g transform="translate(676, 114)">
+      <rect x="0" y="0" width="296" height="198" rx="16" fill="#0F0924" fill-opacity="0.84" stroke="#A78BFA" stroke-opacity="0.38" stroke-width="1.2"/>
+      <text x="18" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="800" letter-spacing="1.1" fill="#FDE68A">CURVA DE CREACIÓN</text>
+
+      <!-- Guías -->
+      <line x1="20" y1="62" x2="276" y2="62" stroke="#FFFFFF" stroke-opacity="0.07" stroke-dasharray="3 4"/>
+      <line x1="20" y1="92" x2="276" y2="92" stroke="#FFFFFF" stroke-opacity="0.07" stroke-dasharray="3 4"/>
+      <line x1="20" y1="122" x2="276" y2="122" stroke="#FFFFFF" stroke-opacity="0.07" stroke-dasharray="3 4"/>
+      <line x1="20" y1="150" x2="276" y2="150" stroke="#C4B5FD" stroke-opacity="0.28" stroke-width="1"/>
+
+      <!-- Área bajo la curva que aparece suavemente -->
+      <polygon points="24,150 24,138 74,116 124,124 174,82 224,90 272,56 272,150" fill="url(#area-fill)" opacity="0">
+        <animate attributeName="opacity" values="0;0;0.9;0.9;0;0" keyTimes="0;0.14;0.34;0.84;0.94;1" dur="10s" repeatCount="indefinite"/>
+      </polygon>
+
+      <!-- Línea neón dibujándose progresivamente desde vacía -->
+      <polyline points="24,138 74,116 124,124 174,82 224,90 272,56" fill="none" stroke="url(#pulse-line)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="330" stroke-dashoffset="330">
+        <animate attributeName="stroke-dashoffset" values="330;330;0;0;330;330" keyTimes="0;0.06;0.32;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </polyline>
+
+      <!-- Nodos que brotan al pasar la curva -->
+      
+      <circle cx="24" cy="138" r="0" fill="#34D399" stroke="#FFFFFF" stroke-width="1.5">
+        <animate attributeName="r" values="0;0;4.2;4.2;0;0" keyTimes="0;0.080;0.110;0.84;0.93;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="74" cy="116" r="0" fill="#34D399" stroke="#FFFFFF" stroke-width="1.5">
+        <animate attributeName="r" values="0;0;4.2;4.2;0;0" keyTimes="0;0.130;0.160;0.84;0.93;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="124" cy="124" r="0" fill="#34D399" stroke="#FFFFFF" stroke-width="1.5">
+        <animate attributeName="r" values="0;0;4.2;4.2;0;0" keyTimes="0;0.170;0.200;0.84;0.93;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="174" cy="82" r="0" fill="#34D399" stroke="#FFFFFF" stroke-width="1.5">
+        <animate attributeName="r" values="0;0;4.2;4.2;0;0" keyTimes="0;0.220;0.250;0.84;0.93;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="224" cy="90" r="0" fill="#34D399" stroke="#FFFFFF" stroke-width="1.5">
+        <animate attributeName="r" values="0;0;4.2;4.2;0;0" keyTimes="0;0.260;0.290;0.84;0.93;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="272" cy="56" r="0" fill="#34D399" stroke="#FFFFFF" stroke-width="1.5">
+        <animate attributeName="r" values="0;0;4.2;4.2;0;0" keyTimes="0;0.310;0.340;0.84;0.93;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="10s" repeatCount="indefinite"/>
+      </circle>
+
+      <text x="148" y="176" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.8" font-weight="600" fill="#DDD6FE" fill-opacity="0.86">Evolución continua  •  APIs, SaaS &amp; Mundos 3D</text>
+    </g>
   </g>
-  <rect x="2" y="2" width="996" height="102" rx="20" fill="none" stroke="#C084FC" stroke-opacity="0.6" stroke-width="1.6"/>
+  <rect x="2" y="2" width="996" height="332" rx="22" fill="none" stroke="#C084FC" stroke-opacity="0.62" stroke-width="1.8"/>
 </svg>

@@ -78,82 +78,112 @@
 
     
     <g transform="translate(28, 128)">
-      <rect x="0" y="0" width="149" height="52" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
+      <rect x="0" y="0" width="149" height="56" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
         <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.00s" repeatCount="indefinite"/>
       </rect>
       <rect x="0" y="0" width="149" height="4" rx="2" fill="#F472B6">
         <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.00s" repeatCount="indefinite"/>
       </rect>
-      <circle cx="16" cy="28" r="5" fill="#F472B6">
-        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="0.00s" repeatCount="indefinite"/>
+      <circle cx="15" cy="24" r="4.5" fill="#F472B6">
+        <animate attributeName="r" values="3.8;5.4;3.8" dur="2.8s" begin="0.00s" repeatCount="indefinite"/>
       </circle>
-      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">React 19</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">UI Reactiva</text>
+      <text x="27" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.8" font-weight="800" fill="#FFFFFF">React 19</text>
+      <text x="27" y="38" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">UI Reactiva</text>
+      <!-- Mini barra de dominio que se llena desde vacío -->
+      <rect x="10" y="46" width="129" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="10" y="46" width="0" height="4" rx="2" fill="#F472B6">
+        <animate attributeName="width" values="0;0;121;121;0;0" keyTimes="0;0.040;0.200;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="9.5s" repeatCount="indefinite"/>
+      </rect>
     </g>
     <g transform="translate(187, 128)">
-      <rect x="0" y="0" width="149" height="52" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
-        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.35s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="149" height="56" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.28s" repeatCount="indefinite"/>
       </rect>
       <rect x="0" y="0" width="149" height="4" rx="2" fill="#60A5FA">
-        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.35s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.28s" repeatCount="indefinite"/>
       </rect>
-      <circle cx="16" cy="28" r="5" fill="#60A5FA">
-        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="0.35s" repeatCount="indefinite"/>
+      <circle cx="15" cy="24" r="4.5" fill="#60A5FA">
+        <animate attributeName="r" values="3.8;5.4;3.8" dur="2.8s" begin="0.28s" repeatCount="indefinite"/>
       </circle>
-      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">TypeScript</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Tipado Estricto</text>
+      <text x="27" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.8" font-weight="800" fill="#FFFFFF">TypeScript</text>
+      <text x="27" y="38" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Tipado Estricto</text>
+      <!-- Mini barra de dominio que se llena desde vacío -->
+      <rect x="10" y="46" width="129" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="10" y="46" width="0" height="4" rx="2" fill="#60A5FA">
+        <animate attributeName="width" values="0;0;123;123;0;0" keyTimes="0;0.075;0.235;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="9.5s" repeatCount="indefinite"/>
+      </rect>
     </g>
     <g transform="translate(346, 128)">
-      <rect x="0" y="0" width="149" height="52" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
-        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.70s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="149" height="56" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.56s" repeatCount="indefinite"/>
       </rect>
       <rect x="0" y="0" width="149" height="4" rx="2" fill="#FB7185">
-        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.70s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.56s" repeatCount="indefinite"/>
       </rect>
-      <circle cx="16" cy="28" r="5" fill="#FB7185">
-        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="0.70s" repeatCount="indefinite"/>
+      <circle cx="15" cy="24" r="4.5" fill="#FB7185">
+        <animate attributeName="r" values="3.8;5.4;3.8" dur="2.8s" begin="0.56s" repeatCount="indefinite"/>
       </circle>
-      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Three.js 3D</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">WebGL Engine</text>
+      <text x="27" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.8" font-weight="800" fill="#FFFFFF">Three.js 3D</text>
+      <text x="27" y="38" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">WebGL Engine</text>
+      <!-- Mini barra de dominio que se llena desde vacío -->
+      <rect x="10" y="46" width="129" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="10" y="46" width="0" height="4" rx="2" fill="#FB7185">
+        <animate attributeName="width" values="0;0;115;115;0;0" keyTimes="0;0.110;0.270;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="9.5s" repeatCount="indefinite"/>
+      </rect>
     </g>
     <g transform="translate(505, 128)">
-      <rect x="0" y="0" width="149" height="52" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
-        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.05s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="149" height="56" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="0.84s" repeatCount="indefinite"/>
       </rect>
       <rect x="0" y="0" width="149" height="4" rx="2" fill="#C084FC">
-        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.05s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="0.84s" repeatCount="indefinite"/>
       </rect>
-      <circle cx="16" cy="28" r="5" fill="#C084FC">
-        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="1.05s" repeatCount="indefinite"/>
+      <circle cx="15" cy="24" r="4.5" fill="#C084FC">
+        <animate attributeName="r" values="3.8;5.4;3.8" dur="2.8s" begin="0.84s" repeatCount="indefinite"/>
       </circle>
-      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Next.js</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Full-Stack App</text>
+      <text x="27" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.8" font-weight="800" fill="#FFFFFF">Next.js</text>
+      <text x="27" y="38" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Full-Stack App</text>
+      <!-- Mini barra de dominio que se llena desde vacío -->
+      <rect x="10" y="46" width="129" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="10" y="46" width="0" height="4" rx="2" fill="#C084FC">
+        <animate attributeName="width" values="0;0;119;119;0;0" keyTimes="0;0.145;0.305;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="9.5s" repeatCount="indefinite"/>
+      </rect>
     </g>
     <g transform="translate(664, 128)">
-      <rect x="0" y="0" width="149" height="52" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
-        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.40s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="149" height="56" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.12s" repeatCount="indefinite"/>
       </rect>
       <rect x="0" y="0" width="149" height="4" rx="2" fill="#FBBF24">
-        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.40s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.12s" repeatCount="indefinite"/>
       </rect>
-      <circle cx="16" cy="28" r="5" fill="#FBBF24">
-        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="1.40s" repeatCount="indefinite"/>
+      <circle cx="15" cy="24" r="4.5" fill="#FBBF24">
+        <animate attributeName="r" values="3.8;5.4;3.8" dur="2.8s" begin="1.12s" repeatCount="indefinite"/>
       </circle>
-      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Vite 7</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Build Veloz</text>
+      <text x="27" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.8" font-weight="800" fill="#FFFFFF">Vite 7</text>
+      <text x="27" y="38" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Build Veloz</text>
+      <!-- Mini barra de dominio que se llena desde vacío -->
+      <rect x="10" y="46" width="129" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="10" y="46" width="0" height="4" rx="2" fill="#FBBF24">
+        <animate attributeName="width" values="0;0;117;117;0;0" keyTimes="0;0.180;0.340;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="9.5s" repeatCount="indefinite"/>
+      </rect>
     </g>
     <g transform="translate(823, 128)">
-      <rect x="0" y="0" width="149" height="52" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
-        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+      <rect x="0" y="0" width="149" height="56" rx="12" fill="rgba(34, 8, 28, 0.78)" stroke="rgba(249, 168, 212, 0.42)" stroke-width="1.2">
+        <animate attributeName="stroke-opacity" values="0.35;0.95;0.35" dur="3.5s" begin="1.40s" repeatCount="indefinite"/>
       </rect>
       <rect x="0" y="0" width="149" height="4" rx="2" fill="#22D3EE">
-        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;1;0.55" dur="3.5s" begin="1.40s" repeatCount="indefinite"/>
       </rect>
-      <circle cx="16" cy="28" r="5" fill="#22D3EE">
-        <animate attributeName="r" values="4.2;5.8;4.2" dur="2.8s" begin="1.75s" repeatCount="indefinite"/>
+      <circle cx="15" cy="24" r="4.5" fill="#22D3EE">
+        <animate attributeName="r" values="3.8;5.4;3.8" dur="2.8s" begin="1.40s" repeatCount="indefinite"/>
       </circle>
-      <text x="29" y="26" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF">Tailwind CSS</text>
-      <text x="29" y="42" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10.2" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Diseño Moderno</text>
+      <text x="27" y="23" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="12.8" font-weight="800" fill="#FFFFFF">Tailwind CSS</text>
+      <text x="27" y="38" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="600" fill="#FFFFFF" fill-opacity="0.72">Diseño Moderno</text>
+      <!-- Mini barra de dominio que se llena desde vacío -->
+      <rect x="10" y="46" width="129" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.12"/>
+      <rect x="10" y="46" width="0" height="4" rx="2" fill="#22D3EE">
+        <animate attributeName="width" values="0;0;120;120;0;0" keyTimes="0;0.215;0.375;0.84;0.94;1" calcMode="spline" keySplines="0 0 1 1; 0.22 1 0.36 1; 0 0 1 1; 0.4 0 0.2 1; 0 0 1 1" dur="9.5s" repeatCount="indefinite"/>
+      </rect>
     </g>
 
     <g transform="translate(28, 204)">
